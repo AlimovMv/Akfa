@@ -412,7 +412,6 @@ body {
     }
 
     &__wrapper {
-        //display: flex;
         //flex-wrap: wrap;
         //flex-direction: row;
         //justify-content: space-between;
@@ -420,13 +419,13 @@ body {
 
     &__item {
         //max-width: 90%;
-        //height: 100%;
+        height: 650px;
         //background-color: $lightbg;
         border-radius: 15px;
         padding: 40px;
         box-shadow: 0 0 10px rgba(97, 97, 97, 0.5);
-        //display: flex;
-        //flex-direction: column;
+        display: flex;
+        flex-direction: column;
         margin: 20px;
     }
 
@@ -436,7 +435,7 @@ body {
         color: $darktext;
         font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
         font-size: 20px;
-        //flex: 1 1 auto; //Пока не работает
+        flex: 1 1 auto;
     }
 
     &__item-username {
@@ -704,13 +703,14 @@ body {
         }
     }
 
+    .container {
+        max-width: 970px;
+    }
+
     .header__login {
         display: none;
     }
 
-    .container {
-        max-width: 970px;
-    }
     .header__nav {
         display: none;
     }
@@ -718,6 +718,9 @@ body {
         max-width: 47%;
     }
 
+    .Feedbacks__item {
+        height: 450px;
+    }
     .Feedbacks__item-userphoto {
         display: none;
     }
@@ -734,26 +737,13 @@ body {
             display: none;
         }
     }
-    .header__login {
-        display: none;
-    }
+
     .burgermenu {
         //padding-right: 30px;
         img {
             //opacity: 1;
             max-width: 60px;
             height: auto;
-        }
-    }
-
-    .projects__item {
-        width: 50%;
-        padding-bottom: 20px;
-        img {
-            height: 100%;
-            max-height: 400px;
-            width: auto;
-            max-width: 400px;
         }
     }
 
@@ -777,6 +767,14 @@ body {
         line-height: 85px;
     }
 
+    .header__login {
+        display: none;
+    }
+
+    .header__inner {
+        height: 62vh;
+    }
+
     .header__form-button {
         width: 500px;
         padding: 30px;
@@ -788,19 +786,13 @@ body {
     .header__menu {
         padding: 40px 0;
     }
+
     .header__logo {
         img {
             max-width: 300px;
             height: auto;
             padding-right: 20px;
         }
-    }
-    .item-top {
-        font-size: 100px;
-    }
-
-    .footer {
-        display: none;
     }
 
     .moreDetails {
@@ -814,6 +806,21 @@ body {
                 padding-left: 30px;
             }
         }
+    }
+
+    .projects__item {
+        width: 50%;
+        padding-bottom: 20px;
+        img {
+            height: 100%;
+            max-height: 400px;
+            width: auto;
+            max-width: 400px;
+        }
+    }
+
+    .item-top {
+        font-size: 100px;
     }
 
     .news {
@@ -839,6 +846,15 @@ body {
         }
     }
 
+    .Feedbacks__item-date {
+        padding-top: 30px;
+        font-size: 26px;
+    }
+
+    .Feedbacks__item-userinfo {
+        font-size: 25px;
+    }
+
     .contacts__item {
         max-width: 100%;
     }
@@ -851,6 +867,10 @@ body {
         }
     }
 
+    .footer {
+        display: none;
+    }
+
     .subfooter {
         font-size: 25px;
         a {
@@ -861,15 +881,6 @@ body {
             }
         }
     }
-
-    .Feedbacks__item-date {
-        padding-top: 30px;
-        font-size: 26px;
-    }
-
-    .Feedbacks__item-userinfo {
-        font-size: 25px;
-    }
 }
 
 @media (max-width: 992px) and (orientation: landscape) {
@@ -879,29 +890,6 @@ body {
             //opacity: 1;
             max-width: 30px;
             height: auto;
-        }
-    }
-    .header__menu {
-        padding: 20px 0;
-    }
-    .header__logo {
-        img {
-            max-width: 200px;
-            height: auto;
-            padding-right: 20px;
-        }
-    }
-
-    .header__title {
-        font-size: 35px;
-        line-height: 45px;
-    }
-
-    .header__form-button {
-        width: 220px;
-        padding: 20px;
-        button {
-            font-size: 20px;
         }
     }
 
@@ -918,5 +906,34 @@ body {
     .title {
         font-size: 40px;
         line-height: 50px;
+    }
+
+    .header__menu {
+        padding: 20px 0;
+    }
+
+    .header__logo {
+        img {
+            max-width: 200px;
+            height: auto;
+            padding-right: 20px;
+        }
+    }
+
+    .header__inner {
+        height: 100vh;
+    }
+
+    .header__title {
+        font-size: 35px;
+        line-height: 45px;
+    }
+
+    .header__form-button {
+        width: 220px;
+        padding: 20px;
+        button {
+            font-size: 20px;
+        }
     }
 }
