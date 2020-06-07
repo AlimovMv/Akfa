@@ -287,7 +287,7 @@ body {
     &__title {
         color: $darkredtextbg;
         text-align: center;
-        margin-bottom: 20px;
+        margin-bottom: 60px;
     }
 
     &__wrapper {
@@ -305,10 +305,8 @@ body {
             max-width: 100%;
             transition: 1s;
             img {
-                height: 100%;
                 height: 200px;
                 width: 100%;
-                //max-width: 350px;
                 object-fit: cover;
             }
 
@@ -488,7 +486,7 @@ body {
     &__wrapper {
         display: flex;
         justify-content: space-between;
-        //flex-wrap: nowrap;
+        flex-wrap: wrap;
         //flex-direction: row;
     }
 
@@ -638,6 +636,7 @@ body {
         color: $lighttext;
         display: block;
         transition: 0.5s;
+        line-height: 20px;
     }
 
     &__wrapper-col {
@@ -722,6 +721,10 @@ body {
     .Feedbacks__item-userphoto {
         display: none;
     }
+
+    .Feedbacks__item-date {
+        padding-top: 30px;
+    }
 }
 
 @media (max-width: 992px) {
@@ -755,37 +758,43 @@ body {
     }
 
     .subtitle {
-        font-size: 30px;
-        line-height: 40px;
+        font-size: 40px;
+        line-height: 60px;
     }
 
     .text {
-        font-size: 22px;
-        line-height: 30px;
-    }
-
-    .title {
-        font-size: 30px;
-        line-height: 40px;
-    }
-
-    .header__title {
-        font-size: 40px;
+        font-size: 35px;
         line-height: 50px;
     }
 
+    .title {
+        font-size: 60px;
+        line-height: 80px;
+    }
+
+    .header__title {
+        font-size: 70px;
+        line-height: 85px;
+    }
+
     .header__form-button {
-        width: 250px;
-        padding: 20px;
+        width: 500px;
+        padding: 30px;
         button {
-            font-size: 18px;
+            font-size: 40px;
         }
     }
 
     .header__menu {
-        padding: 25px 0;
+        padding: 40px 0;
     }
-
+    .header__logo {
+        img {
+            max-width: 300px;
+            height: auto;
+            padding-right: 20px;
+        }
+    }
     .item-top {
         font-size: 100px;
     }
@@ -793,16 +802,121 @@ body {
     .footer {
         display: none;
     }
-}
 
-@media (max-width: 787px) {
     .moreDetails {
+        margin: 0 auto;
         &__wrapper-item {
             width: 100%;
+            .item-text {
+                font-size: 35px;
+                line-height: 50px;
+                width: 100%;
+                padding-left: 30px;
+            }
         }
     }
 
-    .item-text {
-        width: 100%;
+    .news {
+        &__item {
+            max-width: 100%;
+            &-icon {
+                max-height: 400px;
+                img {
+                    height: 400px;
+                }
+            }
+            &-button {
+                font-size: 35px;
+                padding-bottom: 90px;
+            }
+        }
+
+        &__godown {
+            margin: 0;
+            img {
+                max-width: 100px;
+            }
+        }
+    }
+
+    .contacts__item {
+        max-width: 100%;
+    }
+
+    .contacts__map {
+        padding-top: 30px;
+        padding-right: 0;
+        img {
+            max-width: 100%;
+        }
+    }
+
+    .subfooter {
+        font-size: 25px;
+        a {
+            line-height: 40px;
+            img {
+                width: 70px;
+                height: 70px;
+            }
+        }
+    }
+
+    .Feedbacks__item-date {
+        padding-top: 30px;
+        font-size: 26px;
+    }
+
+    .Feedbacks__item-userinfo {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 992px) and (orientation: landscape) {
+    .burgermenu {
+        //padding-right: 30px;
+        img {
+            //opacity: 1;
+            max-width: 30px;
+            height: auto;
+        }
+    }
+    .header__menu {
+        padding: 20px 0;
+    }
+    .header__logo {
+        img {
+            max-width: 200px;
+            height: auto;
+            padding-right: 20px;
+        }
+    }
+
+    .header__title {
+        font-size: 35px;
+        line-height: 45px;
+    }
+
+    .header__form-button {
+        width: 220px;
+        padding: 20px;
+        button {
+            font-size: 20px;
+        }
+    }
+
+    .subtitle {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .text {
+        font-size: 25px;
+        line-height: 35px;
+    }
+
+    .title {
+        font-size: 40px;
+        line-height: 50px;
     }
 }

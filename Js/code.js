@@ -2,7 +2,7 @@ $(document).ready(function () {
     $("#carousel1").owlCarousel({
         loop: true, //Зацикливаем слайдер
         margin: 50, //Отступ от элемента справа в 50px
-        nav: true, //Отключение навигации
+        nav: false, //Отключение навигации
         autoplay: true, //Автозапуск слайдера
         smartSpeed: 1000, //Время движения слайда
         autoplayTimeout: 3000, //Время смены слайда
@@ -23,7 +23,9 @@ $(document).ready(function () {
 $(document).ready(function () {
     $("#carousel2").owlCarousel({
         loop: true, //Зацикливаем слайдер
-        nav: true, //Отключение навигации
+        nav: false, //Отключение навигации
+        responsiveClass: true,
+        navText: ["<img src='images/prev.png'>", "<img src='images/next.png'>"],
         autoplay: true, //Автозапуск слайдера
         smartSpeed: 1000, //Время движения слайда
         autoplayTimeout: 3000, //Время смены слайда
@@ -32,7 +34,7 @@ $(document).ready(function () {
                 items: 1
             },
             600: {
-                items: 2
+                items: 1
             },
             1000: {
                 items: 3
@@ -44,7 +46,7 @@ $(document).ready(function () {
 $(document).ready(function () {
     $("#carousel3").owlCarousel({
         loop: true, //Зацикливаем слайдер
-        nav: true, //Отключение навигации
+        nav: false, //Отключение навигации
         autoplay: true, //Автозапуск слайдера
         smartSpeed: 1000, //Время движения слайда
         autoplayTimeout: 2000, //Время смены слайда
