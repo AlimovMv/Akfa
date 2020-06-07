@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW 2018 (64-Bit) -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="35mm" height="35mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 3500 3500"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str2 {stroke:#CF0000;stroke-width:50;stroke-miterlimit:22.9256}
+    .str1 {stroke:#CF0000;stroke-width:20;stroke-miterlimit:22.9256}
+    .str0 {stroke:#CF0000;stroke-width:50;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:22.9256}
+    .fil1 {fill:none}
+    .fil2 {fill:#CF0000}
+    .fil0 {fill:#ECECED}
+   ]]>
+  </style>
+ </defs>
+ <g id="Слой_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_1988699491968">
+   <circle class="fil0" cx="1749.99" cy="1750" r="1750"/>
+   <path class="fil1 str0" d="M2332.3 2554.2l-52.83 -369.83c-17.6,-123.3 -35.21,-246.57 -52.82,-369.87l-198.96 23.04c-66.32,7.67 -132.63,15.35 -198.94,23.02l-83.52 182.03c-27.84,60.68 -55.68,121.36 -83.52,182.04l335.31 164.79 335.28 164.78z"/>
+   <path class="fil1 str0" d="M1676.51 1045.32l546.6 752.93 -201.66 25 -201.65 24.99 -86.22 183.99 -86.23 184.01 -657.24 -905.34 1.96 -1.43 -1.76 -2.43 0.05 -0.03 -1.6 -2.11c-60.18,-82.9 19.91,-243.67 178.91,-359.1 158.99,-115.42 336.67,-141.78 396.85,-58.88l1.51 2.17 0.05 -0.03 125.13 172.37c-4.31,-5.93 -9.24,-11.29 -14.7,-16.11z"/>
+   <path class="fil1 str1" d="M1691.21 1061.43l-125.13 -172.37 -0.05 0.03 -1.51 -2.17c-60.18,-82.9 -237.86,-56.54 -396.85,58.88 -159,115.43 -239.09,276.2 -178.91,359.1l1.6 2.11 -0.05 0.03 125.13 172.37c-60.18,-82.9 19.92,-243.68 178.91,-359.1 159,-115.43 336.67,-141.79 396.86,-58.88z"/>
+   <path class="fil1 str2" d="M1781.76 1188.45l-87.71 -123.11 -0.05 0.04 -1.5 -2.18c-60.19,-82.9 -237.87,-56.54 -396.86,58.88 -158.99,115.43 -239.09,276.2 -178.91,359.11l1.61 2.1 -0.05 0.03 87.71 123.11c-60.19,-82.9 19.91,-243.68 178.91,-359.1 158.99,-115.42 336.67,-141.78 396.85,-58.88z"/>
+   <rect class="fil1 str0" transform="matrix(0.597119 0.82252 -0.82252 0.597119 1394.76 1259.77)" width="714.2" height="1.73"/>
+   <polygon class="fil2 str1" points="2320.36,2537.75 2288.95,2317.88 2125.61,2442.04 "/>
+  </g>
+ </g>
+</svg>
