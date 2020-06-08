@@ -1,5 +1,24 @@
 $(document).ready(function () {
-    $("#carousel1").owlCarousel({
+
+    $('.burgermenu').click(function (event) {
+        $('.burgermenu-x').addClass('.active');
+        $('.burgermenu').addClass('.inactive');
+        $('.header__nav').addClass('.active');
+        $('.header__nav:before').addClass('.active');
+        //При нажатии на burger нужно скрыть сам блок Burger
+        // и отображать блок burger-x,.header__nav,.header__nav:before
+    });
+
+    $('.burgermenu-x').click(function (event) {
+        $('.burgermenu').addClass('.active');
+        $('.burgermenu-x').addClass('.inactive');
+        $('.header__nav').addClass('.inactive');
+        $('.header__nav:before').addClass('.inactive');
+        //При нажатии на burger-x,.header__nav,.header__nav:before нужно скрыть сам блок Burger
+        // и отображать блок burger
+    });
+
+    $("#carouselPartners").owlCarousel({
         loop: true, //Зацикливаем слайдер
         margin: 50, //Отступ от элемента справа в 50px
         nav: false, //Отключение навигации
@@ -18,10 +37,8 @@ $(document).ready(function () {
             }
         }
     });
-});
 
-$(document).ready(function () {
-    $("#carousel2").owlCarousel({
+    $("#carouselFeedbacks").owlCarousel({
         loop: true, //Зацикливаем слайдер
         nav: false, //Отключение навигации
         responsiveClass: true,
@@ -41,10 +58,8 @@ $(document).ready(function () {
             }
         }
     });
-});
 
-$(document).ready(function () {
-    $("#carousel3").owlCarousel({
+    $("#carouselHeader").owlCarousel({
         loop: true, //Зацикливаем слайдер
         nav: false, //Отключение навигации
         autoplay: true, //Автозапуск слайдера

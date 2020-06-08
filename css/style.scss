@@ -129,6 +129,12 @@ body {
                 z-index: 1;
             }
         }
+        & .active {
+            right: 0;
+        }
+        &:before .active {
+            left: 0;
+        }
     }
 
     &__login {
@@ -229,10 +235,21 @@ body {
 }
 
 .burgermenu {
-    align-self: center;
-    img {
-        max-width: 0;
-        opacity: 0;
+    display: none;
+    &-x {
+        display: none;
+        & .active {
+            display: block;
+        }
+        & .inactive {
+            display: none;
+        }
+    }
+    & .active {
+        display: block;
+    }
+    & .inactive {
+        display: none;
     }
 }
 
@@ -695,9 +712,10 @@ body {
 
 @media (max-width: 1200px) {
     .burgermenu {
+        display: block;
+        align-self: center;
         padding-right: 30px;
         img {
-            opacity: 1;
             max-width: 30px;
             height: auto;
         }
@@ -708,12 +726,70 @@ body {
     }
 
     .header__login {
-        display: none;
+        //display: none;
+        //position: fixed;
+        //top: 0;
+        //right: 15%;
+        z-index: 7;
+        padding-left: 360px;
+        &-item {
+            padding: 15px 35px;
+            span {
+                font-size: 20px;
+            }
+        }
     }
 
-    .header__nav {
-        display: none;
+    .header__menu {
+        //background-color: rgba($color: $lightbg, $alpha: 1);
     }
+    .header__nav {
+        //display: none;
+        position: fixed;
+        right: -100%;
+        top: 0;
+        width: 40%;
+        height: 100vh;
+        background-color: rgba($color: $lightbg, $alpha: 1);
+        z-index: 6;
+        padding: 150px 20px 0 20px;
+        font-size: 20px;
+        line-height: 50px;
+        flex-direction: column;
+
+        &:before {
+            content: "";
+            position: fixed;
+            left: -100%;
+            bottom: 0;
+            width: 60%;
+            height: 100vh;
+            background-color: rgba($color: $darkgrey, $alpha: 0.4);
+            z-index: 5;
+        }
+        .header__nav-item {
+            &:after {
+                display: none;
+            }
+        }
+
+        .header__nav-activeitem {
+            background-color: $lightgrey;
+            border-radius: 5px;
+        }
+    }
+
+    .burgermenu-x {
+        //display: block;
+        align-self: center;
+        z-index: 9;
+        padding-right: 30px;
+        img {
+            max-width: 30px;
+            height: auto;
+        }
+    }
+
     .news__item {
         max-width: 47%;
     }
@@ -747,6 +823,13 @@ body {
         }
     }
 
+    .burgermenu-x {
+        img {
+            max-width: 60px;
+            height: auto;
+        }
+    }
+
     .subtitle {
         font-size: 40px;
         line-height: 60px;
@@ -762,13 +845,33 @@ body {
         line-height: 80px;
     }
 
+    .header__nav {
+        font-size: 35px;
+        line-height: 80px;
+        width: 60%;
+        padding-top: 180px;
+        &:before {
+            width: 40%;
+        }
+    }
+
     .header__title {
         font-size: 70px;
         line-height: 85px;
     }
 
     .header__login {
-        display: none;
+        //display: none;
+        //top: 0;
+        //right: 15%;
+        padding-left: 190px;
+        &-item {
+            padding: 30px 0 20px 0;
+            span {
+                padding: 0 40px;
+                font-size: 30px;
+            }
+        }
     }
 
     .header__inner {
