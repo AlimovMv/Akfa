@@ -1,0 +1,224 @@
+@media (max-width: 1200px) {
+    .header__login {
+        //display: none;
+        //position: fixed;
+        //top: 0;
+        //right: 15%;
+        margin: 0;
+        padding: 0;
+        z-index: 7;
+        padding-left: 360px;
+        &-item {
+            padding: 15px 35px;
+            span {
+                font-size: 20px;
+            }
+        }
+    }
+
+    .header__nav {
+        //display: none;
+        transition: 1s; //ok
+        position: fixed;
+        right: -100%;
+        top: 0;
+        width: 40%;
+        height: 100vh;
+        background-color: rgba($color: $lightbg, $alpha: 1);
+        z-index: 6;
+        padding: 150px 20px 0 20px;
+        font-size: 20px;
+        line-height: 50px;
+        flex-direction: column;
+
+        &::before {
+            content: "";
+            position: fixed;
+            left: -100%;
+            bottom: 0;
+            width: 60%;
+            height: 100vh;
+            background-color: rgba($color: $darkgrey, $alpha: 0.4);
+            z-index: 5;
+        }
+
+        .header__nav-item {
+            &:after {
+                display: none;
+            }
+        }
+
+        .header__nav-activeitem {
+            background-color: $lightgrey;
+            border-radius: 5px;
+        }
+        &.active {
+            right: 0;
+        }
+        &.inactive {
+            right: -100%;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .header__nav {
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        line-height: 50px;
+        width: 60%;
+        padding-top: 180px;
+        &:before {
+            width: 40%;
+        }
+    }
+
+    .header__menu {
+        padding: 30px 0;
+    }
+
+    .header__logo {
+        img {
+            max-width: 200px;
+            height: auto;
+            //padding-right: 20px;
+        }
+    }
+
+    .header__login {
+        //display: none;
+        //top: 0;
+        //right: 15%;
+        padding-left: 180px;
+        &-item {
+            padding: 20px 0;
+            span {
+                padding: 0 40px;
+                font-size: 20px;
+            }
+        }
+    }
+
+    .footer {
+        display: none;
+    }
+
+    .subfooter {
+        font-size: 14px;
+        p {
+            color: $lighttext;
+        }
+        a {
+            //z-index: 20;
+            line-height: 30px;
+            img {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) and (orientation: landscape) {
+    .header__menu {
+        padding: 20px 0;
+    }
+
+    .header__nav {
+        font-size: 14px;
+        line-height: 40px;
+        width: 40%;
+        padding-top: 80px;
+        &:before {
+            width: 60%;
+        }
+    }
+
+    .header__logo {
+        img {
+            max-width: 150px;
+            height: auto;
+            padding-right: 20px;
+        }
+    }
+
+    .header__login {
+        padding-left: 350px;
+        &-item {
+            padding: 10px 0;
+            span {
+                padding: 0 20px;
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+@media (max-width: 787px) {
+    .header__menu {
+        padding: 12px 0;
+    }
+
+    .header__logo {
+        img {
+            max-width: 130px;
+            height: auto;
+            //padding-right: 20px;
+        }
+    }
+
+    .header__nav {
+        font-size: 14px;
+        line-height: 40px;
+        width: 60%;
+        padding-top: 80px;
+        &:before {
+            width: 40%;
+        }
+    }
+
+    .header__login {
+        //display: none;
+        //top: 0;
+        //right: 15%;
+        padding-left: 25px;
+        &-item {
+            padding: 10px 0;
+            span {
+                padding: 0 20px;
+                font-size: 14px;
+            }
+        }
+    }
+
+    .subfooter {
+        font-size: 10px;
+        p {
+            color: $lighttext;
+            padding: 0 0 10px 0;
+            margin: 0;
+        }
+        a {
+            //z-index: 20;
+            line-height: 20px;
+            img {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+}
+
+@media (max-width: 787px) and (orientation: landscape) {
+    .header__login {
+        padding-left: 310px;
+        &-item {
+            padding: 10px 0;
+            span {
+                padding: 0 20px;
+                font-size: 14px;
+            }
+        }
+    }
+}
