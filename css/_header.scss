@@ -1,29 +1,6 @@
 .header {
     font-family: Montserrat;
     color: $lighttext;
-    background: url("/images/Header-bg.jpg") no-repeat 50% 50%;
-    background-size: cover;
-    position: relative;
-
-    &:before {
-        content: "";
-        background-color: #142729;
-        opacity: 0.47;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 5;
-    }
-
-    &__inner {
-        height: 100vh;
-        position: relative;
-        z-index: 10;
-        display: flex;
-        flex-direction: column;
-    }
 
     &__menu {
         position: relative;
@@ -122,50 +99,6 @@
             max-width: 200px;
             height: auto;
             padding-right: 20px;
-        }
-    }
-
-    &__content {
-        flex-grow: 1;
-        display: flex;
-        align-items: center;
-        margin: 0 auto;
-        text-align: center;
-    }
-
-    &__title {
-        font-size: 55px;
-        line-height: 70px;
-        margin-bottom: 30px;
-    }
-
-    &__subtitle {
-        margin-bottom: 30px;
-    }
-
-    &__form {
-        display: flex;
-        justify-content: center;
-
-        &-button {
-            transition: 0.5s linear;
-            padding: 20px;
-            background: linear-gradient(to right, $darkredtextbg 0%, $darkredtextbg 100%);
-            border-radius: 4px;
-            width: 250px;
-
-            button {
-                font-size: 16px;
-                font-weight: 500;
-                background: transparent;
-                color: $lighttext;
-            }
-            &:hover {
-                background: $lightbg;
-                button {
-                    color: $darkredtextbg;
-                }
-            }
         }
     }
 }
