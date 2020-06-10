@@ -1,0 +1,95 @@
+.footer {
+    background-color: #444444;
+    padding-top: 30px;
+    color: $lighttext;
+    font-size: 12px;
+    a {
+        color: $lighttext;
+        display: block;
+        transition: 0.5s;
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__col {
+        display: flex;
+        flex-direction: column;
+        padding-right: 30px;
+    }
+
+    &__logo {
+        align-self: center;
+        padding-bottom: 30px;
+        img {
+            max-width: 200px;
+            height: auto;
+        }
+    }
+
+    &__text {
+        line-height: 1.6;
+        margin-bottom: 10px;
+        max-width: 200px;
+    }
+
+    &__tel {
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 30px;
+        a:hover {
+            color: $lightredtextbg;
+        }
+    }
+
+    &__title {
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+
+    &__item {
+        line-height: 25px;
+        &:hover {
+            color: $lightredtextbg;
+        }
+    }
+}
+
+.subfooter {
+    background: $darkgrey;
+    padding-top: 10px;
+    font-size: 12px;
+    &__wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    a {
+        color: $lighttext;
+        display: block;
+        transition: 0.5s;
+        line-height: 20px;
+    }
+
+    &__wrapper-col {
+        p {
+            margin: 15px 0;
+            font-weight: 600;
+            text-align: center;
+        }
+        a {
+            transition: 0.5s;
+            line-height: 20px;
+            &:hover {
+                color: $lightredtextbg;
+            }
+        }
+    }
+    &__wrapper-inner {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 20px;
+    }
+}

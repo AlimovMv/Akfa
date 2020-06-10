@@ -1,21 +1,49 @@
 $(document).ready(function () {
 
     $('.burgermenu').click(function (event) {
-        $('.burgermenu-x').addClass('.active');
-        $('.burgermenu').addClass('.inactive');
-        $('.header__nav').addClass('.active');
-        $('.header__nav:before').addClass('.active');
+
+        $('.burgermenu').removeClass('active');
+        $('.burgermenu').addClass('inactive');
+
+        $('.burgermenu-x').removeClass('inactive');
+        $('.burgermenu-x').addClass('active');
+
+        $('.socialButton-open').removeClass('inactive');
+        $('.socialButton-open').addClass('active');
+
+        $('.header__nav').removeClass('inactive');
+        $('.header__nav').addClass('active');
+
+        //$('.header__nav:before').removeClass('inactive');
+        //$('.header__nav:before').addClass('active');
         //При нажатии на burger нужно скрыть сам блок Burger
         // и отображать блок burger-x,.header__nav,.header__nav:before
+
     });
 
     $('.burgermenu-x').click(function (event) {
-        $('.burgermenu').addClass('.active');
-        $('.burgermenu-x').addClass('.inactive');
-        $('.header__nav').addClass('.inactive');
-        $('.header__nav:before').addClass('.inactive');
+
+        $('.burgermenu-x').removeClass('active');
+        $('.burgermenu-x').addClass('inactive');
+
+        $('.burgermenu').removeClass('inactive');
+        $('.burgermenu').addClass('active');
+
+        $('.socialButton-open').removeClass('active');
+        $('.socialButton-open').addClass('inactive');
+
+        $('.header__nav').removeClass('active');
+        $('.header__nav').addClass('inactive');
+
+        //$('.header__nav:before').removeClass('active');
+        //$('.header__nav:before').addClass('inactive');
         //При нажатии на burger-x,.header__nav,.header__nav:before нужно скрыть сам блок Burger
         // и отображать блок burger
+
+
+
+
+
     });
 
     $("#carouselPartners").owlCarousel({
