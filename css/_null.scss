@@ -88,3 +88,81 @@ h6 {
 }
 
 /*--------------------Обнуление*/
+
+$darktext: #000000;
+$darkgrey: #555454;
+$lightgrey: #e2e2e2;
+$lighttext: #ffffff;
+$lightbg: #ffffff;
+$darkredtextbg: #990100;
+$lightredtextbg: #cd3301;
+
+body {
+    font-family: Montserrat;
+    font-size: 16px;
+    color: $darkgrey;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 60px;
+}
+
+.title {
+    font-size: 36px;
+    line-height: 51px;
+    font-weight: 500;
+}
+
+.subtitle {
+    font-size: 18px;
+    line-height: 32px;
+}
+
+.text {
+    font-size: 16px;
+    line-height: 28px;
+}
+
+.burgermenu {
+    display: none;
+    &-x {
+        display: none;
+    }
+}
+
+.socialButton {
+    position: fixed;
+    filter: grayscale(100%);
+    img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+    bottom: 40px;
+    right: 40px;
+    border-radius: 50%;
+    z-index: 6;
+    box-shadow: 0 0 30px rgba(97, 97, 97, 0.6);
+    &-open {
+        transition: 2s;
+        position: fixed;
+        bottom: 150px;
+        right: 40px;
+        display: flex;
+        flex-direction: column;
+        z-index: 6;
+
+        img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-top: 10px;
+            box-shadow: 0 0 30px rgba(97, 97, 97, 0.6);
+        }
+    }
+    &:hover {
+        filter: grayscale(0%);
+    }
+}

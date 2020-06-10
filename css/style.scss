@@ -1,84 +1,76 @@
 @import "_null";
 
-$darktext: #000000;
-$darkgrey: #555454;
-$lightgrey: #e2e2e2;
-$lighttext: #ffffff;
-$lightbg: #ffffff;
-$darkredtextbg: #990100;
-$lightredtextbg: #cd3301;
+@import "_header";
 
-body {
-    font-family: Montserrat;
-    font-size: 16px;
-    color: $darkgrey;
-}
+.header {
+    background: url("/images/Header-bg.jpg") no-repeat 50% 50%;
+    background-size: cover;
+    position: relative;
 
-.container {
-    max-width: 1170px;
-    margin: 0 auto;
-    padding: 0 60px;
-}
-
-.title {
-    font-size: 36px;
-    line-height: 51px;
-    font-weight: 500;
-}
-
-.subtitle {
-    font-size: 18px;
-    line-height: 32px;
-}
-
-.text {
-    font-size: 16px;
-    line-height: 28px;
-}
-
-.burgermenu {
-    display: none;
-    &-x {
-        display: none;
+    &:before {
+        content: "";
+        background-color: #142729;
+        opacity: 0.47;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 5;
     }
-}
 
-.socialButton {
-    position: fixed;
-    filter: grayscale(100%);
-    img {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-    }
-    bottom: 40px;
-    right: 40px;
-    border-radius: 50%;
-    z-index: 6;
-    box-shadow: 0 0 30px rgba(97, 97, 97, 0.6);
-    &-open {
-        transition: 2s;
-        position: fixed;
-        bottom: 150px;
-        right: 40px;
+    &__inner {
+        height: 100vh;
+        position: relative;
+        z-index: 10;
         display: flex;
         flex-direction: column;
-        z-index: 6;
+    }
 
-        img {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            margin-top: 10px;
-            box-shadow: 0 0 30px rgba(97, 97, 97, 0.6);
+    &__content {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    &__title {
+        font-size: 55px;
+        line-height: 70px;
+        margin-bottom: 30px;
+    }
+
+    &__subtitle {
+        margin-bottom: 30px;
+    }
+
+    &__form {
+        display: flex;
+        justify-content: center;
+
+        &-button {
+            transition: 0.5s linear;
+            padding: 20px;
+            background: linear-gradient(to right, $darkredtextbg 0%, $darkredtextbg 100%);
+            border-radius: 4px;
+            width: 250px;
+
+            button {
+                font-size: 16px;
+                font-weight: 500;
+                background: transparent;
+                color: $lighttext;
+            }
+            &:hover {
+                background: $lightbg;
+                button {
+                    color: $darkredtextbg;
+                }
+            }
         }
     }
-    &:hover {
-        filter: grayscale(0%);
-    }
 }
-
-@import "_header";
 
 .moreDetails {
     background-color: $lightbg;
@@ -353,106 +345,6 @@ body {
 @import "_footer";
 
 @media (max-width: 1200px) {
-    .burgermenu {
-        display: block;
-        align-self: center;
-        margin: 0;
-        padding: 0 30px 0 0;
-        img {
-            max-width: 30px;
-            height: auto;
-        }
-        &.active {
-            display: block;
-        }
-        &.inactive {
-            display: none;
-        }
-    }
-
-    .burgermenu-x {
-        display: none;
-        align-self: center;
-        z-index: 9;
-        margin: 0;
-        padding: 0 30px 0 0;
-        img {
-            max-width: 30px;
-            height: auto;
-        }
-        &.active {
-            display: block;
-        }
-        &.inactive {
-            display: none;
-        }
-    }
-
-    .container {
-        max-width: 970px;
-    }
-
-    .header__login {
-        //display: none;
-        //position: fixed;
-        //top: 0;
-        //right: 15%;
-        margin: 0;
-        padding: 0;
-        z-index: 7;
-        padding-left: 360px;
-        &-item {
-            padding: 15px 35px;
-            span {
-                font-size: 20px;
-            }
-        }
-    }
-
-    .header__nav {
-        //display: none;
-        transition: 1s; //ok
-        position: fixed;
-        right: -100%;
-        top: 0;
-        width: 40%;
-        height: 100vh;
-        background-color: rgba($color: $lightbg, $alpha: 1);
-        z-index: 6;
-        padding: 150px 20px 0 20px;
-        font-size: 20px;
-        line-height: 50px;
-        flex-direction: column;
-
-        &::before {
-            content: "";
-            position: fixed;
-            left: -100%;
-            bottom: 0;
-            width: 60%;
-            height: 100vh;
-            background-color: rgba($color: $darkgrey, $alpha: 0.4);
-            z-index: 5;
-        }
-
-        .header__nav-item {
-            &:after {
-                display: none;
-            }
-        }
-
-        .header__nav-activeitem {
-            background-color: $lightgrey;
-            border-radius: 5px;
-        }
-        &.active {
-            right: 0;
-        }
-        &.inactive {
-            right: -100%;
-        }
-    }
-
     .news__item {
         max-width: 47%;
     }
@@ -470,95 +362,9 @@ body {
 }
 
 @media (max-width: 992px) {
-    .container {
-        max-width: 787px;
-        padding: 0 50px;
-    }
-
-    .socialButton {
-        display: none;
-        &-open {
-            bottom: 20px;
-            right: -100%;
-            z-index: 150;
-            &.active {
-                right: 70px;
-            }
-            &.inactive {
-                right: -100%;
-            }
-
-            img {
-                width: 70px;
-                height: auto;
-                margin-bottom: 30px;
-            }
-        }
-    }
-
-    .burgermenu {
-        margin: 0;
-        padding: 0;
-        img {
-            //opacity: 1;
-            max-width: 40px;
-            height: auto;
-        }
-    }
-
-    .burgermenu-x {
-        margin: 0;
-        padding: 0;
-        img {
-            max-width: 40px;
-            height: auto;
-        }
-    }
-
-    .subtitle {
-        font-size: 20px;
-        line-height: 35px;
-    }
-
-    .text {
-        font-size: 20px;
-        line-height: 35px;
-    }
-
-    .title {
-        font-size: 30px;
-        line-height: 55px;
-    }
-
-    .header__nav {
-        margin: 0;
-        padding: 0;
-        font-size: 20px;
-        line-height: 50px;
-        width: 60%;
-        padding-top: 180px;
-        &:before {
-            width: 40%;
-        }
-    }
-
     .header__title {
         font-size: 40px;
         line-height: 55px;
-    }
-
-    .header__login {
-        //display: none;
-        //top: 0;
-        //right: 15%;
-        padding-left: 180px;
-        &-item {
-            padding: 20px 0;
-            span {
-                padding: 0 40px;
-                font-size: 20px;
-            }
-        }
     }
 
     .header__inner {
@@ -570,18 +376,6 @@ body {
         padding: 20px;
         button {
             font-size: 20px;
-        }
-    }
-
-    .header__menu {
-        padding: 30px 0;
-    }
-
-    .header__logo {
-        img {
-            max-width: 200px;
-            height: auto;
-            //padding-right: 20px;
         }
     }
 
@@ -660,103 +454,9 @@ body {
             max-width: 100%;
         }
     }
-
-    .footer {
-        display: none;
-    }
-
-    .subfooter {
-        font-size: 14px;
-        p {
-            color: $lighttext;
-        }
-        a {
-            //z-index: 20;
-            line-height: 30px;
-            img {
-                width: 30px;
-                height: 30px;
-            }
-        }
-    }
 }
 
 @media (max-width: 992px) and (orientation: landscape) {
-    .burgermenu {
-        img {
-            max-width: 30px;
-            height: auto;
-        }
-    }
-
-    .burgermenu-x {
-        img {
-            max-width: 30px;
-            height: auto;
-        }
-    }
-
-    .socialButton {
-        display: none;
-        &-open {
-            display: none;
-            &.active {
-                display: none;
-            }
-            &.inactive {
-                display: none;
-            }
-        }
-    }
-
-    .subtitle {
-        font-size: 20px;
-        line-height: 30px;
-    }
-
-    .text {
-        font-size: 25px;
-        line-height: 35px;
-    }
-
-    .title {
-        font-size: 40px;
-        line-height: 50px;
-    }
-
-    .header__menu {
-        padding: 20px 0;
-    }
-
-    .header__nav {
-        font-size: 14px;
-        line-height: 40px;
-        width: 40%;
-        padding-top: 80px;
-        &:before {
-            width: 60%;
-        }
-    }
-
-    .header__logo {
-        img {
-            max-width: 150px;
-            height: auto;
-            padding-right: 20px;
-        }
-    }
-
-    .header__login {
-        padding-left: 350px;
-        &-item {
-            padding: 10px 0;
-            span {
-                padding: 0 20px;
-                font-size: 16px;
-            }
-        }
-    }
-
     .header__inner {
         height: 100vh;
     }
@@ -782,92 +482,9 @@ body {
 }
 
 @media (max-width: 787px) {
-    .container {
-        max-width: 100%;
-        padding: 0 30px;
-    }
-
-    .burgermenu {
-        margin: 0;
-        padding: 0;
-        img {
-            //opacity: 1;
-            max-width: 24px;
-            height: auto;
-        }
-    }
-
-    .burgermenu-x {
-        margin: 0;
-        padding: 0;
-        img {
-            max-width: 24px;
-            height: auto;
-        }
-    }
-
-    .socialButton {
-        &-open {
-            bottom: 20px;
-            right: -100%;
-
-            &.active {
-                right: 40px;
-            }
-            &.inactive {
-                right: -100%;
-            }
-
-            img {
-                width: 45px;
-                height: auto;
-                margin-bottom: 20px;
-            }
-        }
-    }
-
-    .subtitle {
-        font-size: 16px;
-        line-height: 25px;
-    }
-
-    .text {
-        font-size: 16px;
-        line-height: 25px;
-    }
-
-    .title {
-        font-size: 25px;
-        line-height: 40px;
-    }
-
-    .header__nav {
-        font-size: 14px;
-        line-height: 40px;
-        width: 60%;
-        padding-top: 80px;
-        &:before {
-            width: 40%;
-        }
-    }
-
     .header__title {
         font-size: 30px;
         line-height: 45px;
-    }
-
-    .header__login {
-        //display: none;
-        //top: 0;
-        //right: 15%;
-        padding-left: 25px;
-        &-item {
-            padding: 10px 0;
-            span {
-                padding: 0 20px;
-                font-size: 14px;
-            }
-        }
     }
 
     .header__inner {
@@ -879,18 +496,6 @@ body {
         padding: 10px;
         button {
             font-size: 16px;
-        }
-    }
-
-    .header__menu {
-        padding: 12px 0;
-    }
-
-    .header__logo {
-        img {
-            max-width: 130px;
-            height: auto;
-            //padding-right: 20px;
         }
     }
 
@@ -979,37 +584,9 @@ body {
             max-width: 100%;
         }
     }
-
-    .subfooter {
-        font-size: 10px;
-        p {
-            color: $lighttext;
-            padding: 0 0 10px 0;
-            margin: 0;
-        }
-        a {
-            //z-index: 20;
-            line-height: 20px;
-            img {
-                width: 30px;
-                height: 30px;
-            }
-        }
-    }
 }
 
 @media (max-width: 787px) and (orientation: landscape) {
-    .header__login {
-        padding-left: 310px;
-        &-item {
-            padding: 10px 0;
-            span {
-                padding: 0 20px;
-                font-size: 14px;
-            }
-        }
-    }
-
     .news {
         &__item {
             max-width: 100%;
@@ -1048,3 +625,5 @@ body {
         }
     }
 }
+
+@import "header&footer-mediaQuery";
