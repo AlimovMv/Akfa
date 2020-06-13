@@ -10,7 +10,7 @@
 
     <script src="/Js/jquery.js"></script>
     <script src="owlcarousel/owl.carousel.min.js"></script>
-    <script src="/Js/code.js"></script>
+    <script src="/Js/catalog.js"></script>
 
     <link rel="stylesheet" href="css/catalog.css">
     <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
@@ -28,18 +28,11 @@
 
 </head>
 
-<div class="socialButton">
-    <img src="/images/social.svg" alt="">
-</div>
-
-<div class="socialButton-open">
-    <img src="/images/facebook.png" alt="">
-    <img src="/images/whatsapp.png" alt="">
-    <img src="/images/instagram.png" alt="">
+<div class="orders-open">
+    <!----Список подобранных товаров "карзина"-->
 </div>
 
 <body>
-
     <header class="header">
         <div class="header__menu">
             <div class="header__menu-container container">
@@ -57,6 +50,11 @@
                 <div class="header__login">
                     <a href="#" class="header__login-item"><span>Войти</span></a>
                 </div>
+                <div class="orders">
+                    <div class="orders-item">В корзине пусто</div>
+                    <!--После подбора товара текст поменяется |2 шт. = 4446 с| -->
+                </div>
+
                 <div class="burgermenu">
                     <img src="/images/icon-burger.svg" alt="#">
                 </div>
@@ -67,7 +65,379 @@
         </div>
     </header>
 
+    <div class="free-place"></div>
 
+    <div class="categoriesMenu">
+        <div class="categoriesMenu__wrapper">
+            <div class="container">
+                <div class="categoriesMenu__wrapper-row">
+                    <a class="categoriesMenu__item categoriesMenu__activeitem" href="#">Пластиковые
+                        профили</a>
+                    <a class="categoriesMenu__item" href="#">Алюминиевые профили</a>
+                    <a class="categoriesMenu__item" href="#">Фасадные профили</a>
+                    <a class="categoriesMenu__item" href="#">Оконная фурнитура</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="products">
+        <div class="container">
+            <div class="products__wrapper">
+                <div class="products__wrapper-row">
+                    <div class="product__item">
+                        <div class="products__header">
+                            <img class="products__item-image" src="images/wallpaper3.png" alt="">
+                            <div class="products__item-price">
+                                <div class="products__item-price-top">500</div>сом | м
+                            </div>
+                        </div>
+                        <div class="products__content">
+                            <div class="products__item-title">
+                                <a href="">Крутой материал</a>
+                            </div>
+                            <div class="products__item-text">
+                                Подробно о товаре "Плохой продукт" две строчки
+                            </div>
+                            <div class="products__item-addToOrder">
+                                Добавить в корзину
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product__item">
+                        <div class="products__header">
+                            <img class="products__item-image" src="images/wallpaper1.jpg" alt="">
+                            <div class="products__item-price">
+                                <div class="products__item-price-top">300</div>сом | м
+                            </div>
+                        </div>
+                        <div class="products__content">
+                            <div class="products__item-title">
+                                <a href="">Отличный товар</a>
+                            </div>
+                            <div class="products__item-text">
+                                Подробно о товаре "Плохой продукт" две строчки
+                            </div>
+                            <div class="products__item-addToOrder">
+                                Добавить в корзину
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product__item">
+                        <div class="products__header">
+                            <img class="products__item-image" src="images/wallpaper2.jpg" alt="">
+                            <div class="products__item-price">
+                                <div class="products__item-price-top">800</div>сом | м
+                            </div>
+                        </div>
+                        <div class="products__content">
+                            <div class="products__item-title">
+                                <a href="">Хороший товар</a>
+                            </div>
+                            <div class="products__item-text">
+                                Подробно о товаре "Плохой продукт" две строчки
+                            </div>
+                            <div class="products__item-addToOrder">
+                                Добавить в корзину
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product__item">
+                        <div class="products__header">
+                            <img class="products__item-image" src="images/wallpaper4.jpg" alt="">
+                            <div class="products__item-price">
+                                <div class="products__item-price-top">100</div>сом | м
+                            </div>
+                        </div>
+                        <div class="products__content">
+                            <div class="products__item-title">
+                                <a href="">Плохой продукт</a>
+                            </div>
+                            <div class="products__item-text">
+                                Подробно о товаре "Плохой продукт" две строчки
+                            </div>
+                            <div class="products__item-addToOrder">
+                                Добавить в корзину
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="products__wrapper-row">
+                    <div class="products__wrapper-row">
+                        <div class="product__item">
+                            <div class="products__header">
+                                <img class="products__item-image" src="images/wallpaper4.jpg" alt="">
+                                <div class="products__item-price">
+                                    <div class="products__item-price-top">100</div>сом | м
+                                </div>
+                            </div>
+                            <div class="products__content">
+                                <div class="products__item-title">
+                                    <a href="">Плохой продукт</a>
+                                </div>
+                                <div class="products__item-text">
+                                    Подробно о товаре "Плохой продукт" две строчки
+                                </div>
+                                <div class="products__item-addToOrder">
+                                    Добавить в корзину
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="product__item">
+                            <div class="products__header">
+                                <img class="products__item-image" src="images/wallpaper5.jpg" alt="">
+                                <div class="products__item-price">
+                                    <div class="products__item-price-top">300</div>сом | м
+                                </div>
+                            </div>
+                            <div class="products__content">
+                                <div class="products__item-title">
+                                    <a href="">Отличный товар</a>
+                                </div>
+                                <div class="products__item-text">
+                                    Подробно о товаре "Плохой продукт" две строчки
+                                </div>
+                                <div class="products__item-addToOrder">
+                                    Добавить в корзину
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product__item">
+                            <div class="products__header">
+                                <img class="products__item-image" src="images/wallpaper6.jpg" alt="">
+                                <div class="products__item-price">
+                                    <div class="products__item-price-top">800</div>сом | м
+                                </div>
+                            </div>
+                            <div class="products__content">
+                                <div class="products__item-title">
+                                    <a href="">Хороший товар</a>
+                                </div>
+                                <div class="products__item-text">
+                                    Подробно о товаре "Плохой продукт" две строчки
+                                </div>
+                                <div class="products__item-addToOrder">
+                                    Добавить в корзину
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product__item">
+                            <div class="products__header">
+                                <img class="products__item-image" src="images/light-1282314_1920.jpg" alt="">
+                                <div class="products__item-price">
+                                    <div class="products__item-price-top">100</div>сом | м
+                                </div>
+                            </div>
+                            <div class="products__content">
+                                <div class="products__item-title">
+                                    <a href="">Плохой продукт</a>
+                                </div>
+                                <div class="products__item-text">
+                                    Подробно о товаре "Плохой продукт" две строчки
+                                </div>
+                                <div class="products__item-addToOrder">
+                                    Добавить в корзину
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="products__wrapper-row">
+                    <div class="product__item">
+                        <div class="products__header">
+                            <img class="products__item-image" src="images/wallpaper3.png" alt="">
+                            <div class="products__item-price">
+                                <div class="products__item-price-top">500</div>сом | м
+                            </div>
+                        </div>
+                        <div class="products__content">
+                            <div class="products__item-title">
+                                <a href="">Крутой материал</a>
+                            </div>
+                            <div class="products__item-text">
+                                Подробно о товаре "Плохой продукт" две строчки
+                            </div>
+                            <div class="products__item-addToOrder">
+                                Добавить в корзину
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product__item">
+                        <div class="products__header">
+                            <img class="products__item-image" src="images/wallpaper1.jpg" alt="">
+                            <div class="products__item-price">
+                                <div class="products__item-price-top">300</div>сом | м
+                            </div>
+                        </div>
+                        <div class="products__content">
+                            <div class="products__item-title">
+                                <a href="">Отличный товар</a>
+                            </div>
+                            <div class="products__item-text">
+                                Подробно о товаре "Плохой продукт" две строчки
+                            </div>
+                            <div class="products__item-addToOrder">
+                                Добавить в корзину
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product__item">
+                        <div class="products__header">
+                            <img class="products__item-image" src="images/wallpaper2.jpg" alt="">
+                            <div class="products__item-price">
+                                <div class="products__item-price-top">800</div>сом | м
+                            </div>
+                        </div>
+                        <div class="products__content">
+                            <div class="products__item-title">
+                                <a href="">Хороший товар</a>
+                            </div>
+                            <div class="products__item-text">
+                                Подробно о товаре "Плохой продукт" две строчки
+                            </div>
+                            <div class="products__item-addToOrder">
+                                Добавить в корзину
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product__item">
+                        <div class="products__header">
+                            <img class="products__item-image" src="images/wallpaper4.jpg" alt="">
+                            <div class="products__item-price">
+                                <div class="products__item-price-top">100</div>сом | м
+                            </div>
+                        </div>
+                        <div class="products__content">
+                            <div class="products__item-title">
+                                <a href="">Плохой продукт</a>
+                            </div>
+                            <div class="products__item-text">
+                                Подробно о товаре "Плохой продукт" две строчки
+                            </div>
+                            <div class="products__item-addToOrder">
+                                Добавить в корзину
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="products__wrapper-row">
+                    <div class="products__wrapper-row">
+                        <div class="product__item">
+                            <div class="products__header">
+                                <img class="products__item-image" src="images/wallpaper4.jpg" alt="">
+                                <div class="products__item-price">
+                                    <div class="products__item-price-top">100</div>сом | м
+                                </div>
+                            </div>
+                            <div class="products__content">
+                                <div class="products__item-title">
+                                    <a href="">Плохой продукт</a>
+                                </div>
+                                <div class="products__item-text">
+                                    Подробно о товаре "Плохой продукт" две строчки
+                                </div>
+                                <div class="products__item-addToOrder">
+                                    Добавить в корзину
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="product__item">
+                            <div class="products__header">
+                                <img class="products__item-image" src="images/wallpaper5.jpg" alt="">
+                                <div class="products__item-price">
+                                    <div class="products__item-price-top">300</div>сом | м
+                                </div>
+                            </div>
+                            <div class="products__content">
+                                <div class="products__item-title">
+                                    <a href="">Отличный товар</a>
+                                </div>
+                                <div class="products__item-text">
+                                    Подробно о товаре "Плохой продукт" две строчки
+                                </div>
+                                <div class="products__item-addToOrder">
+                                    Добавить в корзину
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product__item">
+                            <div class="products__header">
+                                <img class="products__item-image" src="images/wallpaper6.jpg" alt="">
+                                <div class="products__item-price">
+                                    <div class="products__item-price-top">800</div>сом | м
+                                </div>
+                            </div>
+                            <div class="products__content">
+                                <div class="products__item-title">
+                                    <a href="">Хороший товар</a>
+                                </div>
+                                <div class="products__item-text">
+                                    Подробно о товаре "Плохой продукт" две строчки
+                                </div>
+                                <div class="products__item-addToOrder">
+                                    Добавить в корзину
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product__item">
+                            <div class="products__header">
+                                <img class="products__item-image" src="images/light-1282314_1920.jpg" alt="">
+                                <div class="products__item-price">
+                                    <div class="products__item-price-top">100</div>сом | м
+                                </div>
+                            </div>
+                            <div class="products__content">
+                                <div class="products__item-title">
+                                    <a href="">Плохой продукт</a>
+                                </div>
+                                <div class="products__item-text">
+                                    Подробно о товаре "Плохой продукт" две строчки
+                                </div>
+                                <div class="products__item-addToOrder">
+                                    Добавить в корзину
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup__login">
+        <div class="popup__login-body">
+            <div class="popup__login-content">
+                <a class="popup__login-close" href="#"></a>
+                <div class="popup__login-title">Вход</div>
+                <img class="popup__login-logo" src="images/akfa_logo-kg.svg" alt="">
+
+                <div class="popup__login-text"><b>Здравствуйте,</b> <br> рады вновь приветствовать вас!</div>
+                <form class="popup__login-auth-form" action="catalog.html" method="post" enctype="multipart/form-data">
+                    <input placeholder="Введите логин" class="popup__login-auth-login" type="text" name="userlogin"
+                        value="">
+                    <input placeholder="Введите пароль" class="popup__login-auth-passwd" type="password" name="userpas"
+                        value="">
+                    <div class="popup__login-button"><img class="popup__login-buttonIcon" src="/images/login-new.png"
+                            alt=""> Войти</div>
+                    <a class="popup__login-forgetPaswd" href="#">Забыли пароль?</a>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <footer class="footer">
         <div class="container">

@@ -14,10 +14,10 @@ $(document).ready(function () {
         $('.header__nav').removeClass('inactive');
         $('.header__nav').addClass('active');
 
+        //При нажатии на burger нужно отображать блок .header__nav:before
         //$('.header__nav:before').removeClass('inactive');
         //$('.header__nav:before').addClass('active');
-        //При нажатии на burger нужно скрыть сам блок Burger
-        // и отображать блок burger-x,.header__nav,.header__nav:before
+
 
     });
 
@@ -35,14 +35,9 @@ $(document).ready(function () {
         $('.header__nav').removeClass('active');
         $('.header__nav').addClass('inactive');
 
+        //При нажатии на burger нужно скрыть блок .header__nav:before
         //$('.header__nav:before').removeClass('active');
         //$('.header__nav:before').addClass('inactive');
-        //При нажатии на burger-x,.header__nav,.header__nav:before нужно скрыть сам блок Burger
-        // и отображать блок burger
-
-
-
-
 
     });
 

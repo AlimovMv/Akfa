@@ -1,6 +1,360 @@
 @import "_null";
 @import "_header";
-@import "_footer";
 
-@import "null-mediaQuery";
-@import "header&footer-mediaQuery";
+.header__menu {
+    background-color: rgba($color: $lightbg, $alpha: 1);
+}
+
+.header__login {
+    display: block;
+    &.active {
+        display: block;
+    }
+    &.inactive {
+        display: none;
+    }
+}
+
+//Этот блок мы покажем только для авторизовнных
+//пользователей и займет место блока .header__login
+.orders {
+    display: none;
+    align-self: center;
+    text-decoration: none;
+    font-family: Montserrat;
+    position: relative;
+    &-item {
+        background-color: $darkredtextbg;
+        padding: 15px 10px;
+        border-radius: 4px;
+        transition: 0.3s linear;
+        //font-weight: 500;
+        font-size: 13px;
+        color: $lighttext;
+
+        &:hover {
+            box-shadow: 0 0 10px rgba(97, 97, 97, 0.3);
+            background-color: $lightbg;
+            color: $darkredtextbg;
+        }
+    }
+    &.active {
+        display: block;
+    }
+    &.inactive {
+        display: none;
+    }
+}
+
+.socialButton {
+    display: none;
+    &-open {
+        display: none;
+    }
+}
+
+.free-place {
+    height: 110px;
+}
+
+.popup {
+    &__login {
+        transition: 0.4s;
+        z-index: 102;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        top: 0;
+        left: 0;
+        opacity: 0;
+        visibility: hidden;
+        &.open {
+            visibility: visible;
+            opacity: 1;
+        }
+        &.close {
+            visibility: hidden;
+            opacity: 0;
+        }
+    }
+
+    &__login-body {
+        min-height: 100%;
+        display: flex;
+        align-items: center;
+        overflow-y: auto;
+        overflow-x: hidden;
+        justify-content: center;
+        padding: 30px 10px;
+    }
+
+    &__login-content {
+        position: relative;
+        background-color: $lightbg;
+        color: $darktext;
+        max-width: 500px;
+        padding: 30px;
+    }
+
+    &__login-close {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+    }
+
+    &__login-logo {
+        width: 130px;
+        height: auto;
+        object-fit: cover;
+        padding: 30px 0 70px 0;
+    }
+
+    &__login-title {
+        font-size: 20px;
+        color: $darkredtextbg;
+        font-weight: 600;
+    }
+
+    &__login-text {
+        font-size: 16px;
+        line-height: 30px;
+        font-weight: 500;
+        color: $darkredtextbg;
+    }
+
+    &__login-auth-login {
+        margin-top: 50px;
+        color: $darktext;
+        width: 100%;
+        line-height: 13px;
+        background: transparent;
+        border: 0;
+        border-bottom: 1px solid rgb(119, 0, 0);
+        padding-bottom: 10px;
+        outline: none;
+        font-size: 13px;
+        display: block;
+    }
+
+    &__login-auth-passwd {
+        margin: 20px 0;
+        color: $darktext;
+        width: 100%;
+        line-height: 13px;
+        background: transparent;
+        border: 0;
+        border-bottom: 1px solid rgb(119, 0, 0);
+        padding-bottom: 10px;
+        outline: none;
+        font-size: 13px;
+        display: block;
+    }
+
+    &__login-button {
+        margin: 40px 20px 0 0;
+        position: relative;
+        padding: 15px 30px 15px 45px;
+        display: inline-block;
+        color: $darkredtextbg;
+        background: $lightgrey;
+        transition: 1s;
+        border-radius: 25px;
+        font-size: 14px;
+        font-weight: 500;
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+        &:hover {
+            color: $lighttext;
+            background: $darkredtextbg;
+        }
+    }
+
+    &__login-buttonIcon {
+        position: absolute;
+        width: 30px;
+        left: 12px;
+    }
+
+    &__login-forgetPaswd {
+        font-size: 12px;
+        color: $darktext;
+        text-decoration: underline;
+    }
+
+    &__login-close {
+        position: absolute;
+        right: 32px;
+        top: 32px;
+        width: 15px;
+        height: 15px;
+        opacity: 0.3;
+    }
+    &__login-close:hover {
+        opacity: 1;
+    }
+    &__login-close:before,
+    &__login-close:after {
+        position: absolute;
+        left: 15px;
+        content: " ";
+        height: 15px;
+        width: 2px;
+        background-color: #333;
+    }
+    &__login-close:before {
+        transform: rotate(45deg);
+    }
+    &__login-close:after {
+        transform: rotate(-45deg);
+    }
+}
+
+.categoriesMenu {
+    width: 100%;
+    position: fixed;
+    z-index: 30;
+    background: $darkredtextbg;
+    //margin: 0 0 30px 0;
+    &__wrapper-row {
+        display: flex;
+        justify-content: space-around;
+        a {
+            font-size: 14px;
+            font-weight: 500;
+            color: $lighttext;
+        }
+        padding: 30px 0;
+    }
+
+    &__item {
+        text-align: center;
+        display: inline-block;
+        vertical-align: top;
+        margin: 0 20px;
+        transition: 0.3s;
+        position: relative;
+        font-weight: 500;
+        &:hover {
+            &:after {
+                content: "";
+                display: block;
+                width: 100%;
+                height: 3px;
+                background-color: $lighttext;
+                position: absolute;
+                margin-top: 8px;
+                left: 0;
+                z-index: 1;
+            }
+        }
+    }
+
+    &__activeitem {
+        &:after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 3px;
+            background-color: $lighttext;
+            position: absolute;
+            margin-top: 8px;
+            left: 0;
+            z-index: 1;
+        }
+    }
+}
+
+.products {
+    margin: 90px 0 30px 0;
+    &__wrapper-row {
+        display: flex;
+        justify-content: space-between;
+        //width: 100%;
+        //flex-wrap: wrap;
+        padding: 10px 0;
+        &:first-child {
+            padding-left: 20px;
+        }
+    }
+
+    &__header {
+        position: relative;
+        //overflow: hidden;
+    }
+
+    &__item-image {
+        padding: 0 0 20px 0;
+        max-width: 230px;
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        top: 50%;
+        left: 50%;
+    }
+
+    &__item-title {
+        font-size: 16px;
+        font-weight: 500;
+        a {
+            color: $darkredtextbg;
+        }
+        margin: 0 0 10px 0;
+    }
+
+    &__item-text {
+        width: 85%;
+        font-size: 12px;
+        a {
+            color: $darkgrey;
+        }
+        //margin: 0 0 10px 0;
+    }
+
+    &__item-price {
+        color: $lighttext;
+        background-color: $lightredtextbg;
+        padding: 10px;
+        position: absolute;
+        bottom: 30px;
+        left: -20px;
+        font-size: 12px;
+        &-top {
+            font-weight: 500;
+            font-size: 20px;
+        }
+    }
+
+    &__content {
+        position: relative;
+    }
+
+    //Этот блок мы покажем только для авторизовнных пользователей
+    &__item-addToOrder {
+        transition: 1s;
+        font-size: 12px;
+        position: absolute;
+        bottom: 82px;
+        left: 0;
+        padding: 10px;
+        color: $lighttext;
+        background-color: $darkgrey;
+        visibility: hidden;
+        &.active {
+            left: 43px;
+            opacity: 80%;
+            visibility: visible;
+        }
+
+        &.inactive {
+            left: 0;
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+}
+
+@import "_footer";
+//@import "null-mediaQuery";
+//@import "header&footer-mediaQuery";
