@@ -10,7 +10,7 @@
 
     <script src="/Js/jquery.js"></script>
     <script src="owlcarousel/owl.carousel.min.js"></script>
-    <script src="/Js/catalog.js"></script>
+    <script src="/Js/code.js"></script>
 
     <link rel="stylesheet" href="css/catalog.css">
     <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
@@ -48,7 +48,7 @@
                     <a href="#" class="header__nav-item">Партнерам</a>
                 </nav>
                 <div class="header__login">
-                    <a href="#" class="header__login-item"><span>Войти</span></a>
+                    <div class="header__login-item">Войти</div>
                 </div>
                 <div class="orders">
                     <div class="orders-item">В корзине пусто</div>
@@ -421,7 +421,7 @@
     <div class="popup__login">
         <div class="popup__login-body">
             <div class="popup__login-content">
-                <a class="popup__login-close" href="#"></a>
+                <div class="popup__login-close"></div>
                 <div class="popup__login-title">Вход</div>
                 <img class="popup__login-logo" src="images/akfa_logo-kg.svg" alt="">
 
@@ -435,6 +435,36 @@
                             alt=""> Войти</div>
                     <a class="popup__login-forgetPaswd" href="#">Забыли пароль?</a>
                 </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup__productCard">
+        <div class="popup__productCard-body">
+            <div class="popup__productCard-content">
+                <div class="popup__productCard-close"></div>
+                <div class="popup__productCard-title">Полное наименование товара</div>
+                <div class="popup__productCard-wrapper">
+                    <div class="popup__productCard-item">
+                        <img class="popup__productCard-image" src="images/project3.png" alt="">
+                    </div>
+                    <div class="popup__productCard-item">
+                        <div class="popup__productCard-text">более подробное описание товара Lorem ipsum dolor sit amet
+                            consectetur, adipisicing elit. Qui neque provident voluptas in laudantium quam vel molestiae
+                            delectus molestias omnis. Qui neque provident voluptas in laudantium quam vel molestiae
+                            delectus molestias omnis</div>
+                        <div class="popup__productCard-price">Итого:<span>500</span>с</div>
+
+                        <form class="popup__productCard-form" action="catalog.html" method="post"
+                            enctype="multipart/form-data">
+                            <input placeholder="Введите количество" class="popup__productCard-count" type="number"
+                                name="productCard-count" value="1">
+                            <div class="popup__productCard-button"><img class="popup__productCard-buttonIcon"
+                                    src="/images/Ecommerce_RTE-03-512.png" alt="">Добавить</div>
+                            <a class="popup__productCard-cancel" href="">Отменить</a>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

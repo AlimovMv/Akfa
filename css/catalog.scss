@@ -5,60 +5,8 @@
     background-color: rgba($color: $lightbg, $alpha: 1);
 }
 
-.header__login {
-    display: block;
-    &.active {
-        display: block;
-    }
-    &.inactive {
-        display: none;
-    }
-}
-
-//Этот блок мы покажем только для авторизовнных
-//пользователей и займет место блока .header__login
-.orders {
-    display: none;
-    align-self: center;
-    text-decoration: none;
-    font-family: Montserrat;
-    position: relative;
-    &-item {
-        background-color: $darkredtextbg;
-        padding: 15px 10px;
-        border-radius: 4px;
-        transition: 0.3s linear;
-        //font-weight: 500;
-        font-size: 13px;
-        color: $lighttext;
-
-        &:hover {
-            box-shadow: 0 0 10px rgba(97, 97, 97, 0.3);
-            background-color: $lightbg;
-            color: $darkredtextbg;
-        }
-    }
-    &.active {
-        display: block;
-    }
-    &.inactive {
-        display: none;
-    }
-}
-
-.socialButton {
-    display: none;
-    &-open {
-        display: none;
-    }
-}
-
-.free-place {
-    height: 110px;
-}
-
 .popup {
-    &__login {
+    &__productCard {
         transition: 0.4s;
         z-index: 102;
         position: fixed;
@@ -79,7 +27,7 @@
         }
     }
 
-    &__login-body {
+    &__productCard-body {
         min-height: 100%;
         display: flex;
         align-items: center;
@@ -89,77 +37,93 @@
         padding: 30px 10px;
     }
 
-    &__login-content {
+    &__productCard-content {
         position: relative;
         background-color: $lightbg;
         color: $darktext;
-        max-width: 500px;
+        max-width: 900px;
         padding: 30px;
     }
 
-    &__login-close {
+    &__productCard-close {
         position: absolute;
         top: 10px;
         right: 15px;
     }
 
-    &__login-logo {
-        width: 130px;
-        height: auto;
-        object-fit: cover;
-        padding: 30px 0 70px 0;
+    &__productCard-wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__productCard-item {
+        width: 50%;
+        height: 400px;
+        margin: 25px 30px 0 0;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
-    &__login-title {
+    &__productCard-image {
+        width: auto;
+        height: 100%;
+        object-fit: cover;
+        top: 50%;
+        left: 50%;
+        //padding: 0 70px 0 0;
+    }
+
+    &__productCard-title {
         font-size: 20px;
         color: $darkredtextbg;
         font-weight: 600;
     }
 
-    &__login-text {
+    &__productCard-text {
         font-size: 16px;
         line-height: 30px;
         font-weight: 500;
-        color: $darkredtextbg;
+        color: $darkgrey;
+        flex: 1 1 auto;
     }
 
-    &__login-auth-login {
-        margin-top: 50px;
-        color: $darktext;
-        width: 100%;
-        line-height: 13px;
-        background: transparent;
-        border: 0;
-        border-bottom: 1px solid rgb(119, 0, 0);
-        padding-bottom: 10px;
-        outline: none;
-        font-size: 13px;
-        display: block;
-    }
-
-    &__login-auth-passwd {
+    &__productCard-price {
         margin: 20px 0;
+        font-size: 18px;
+        line-height: 30px;
+        font-weight: 500;
         color: $darktext;
-        width: 100%;
+        span {
+            padding: 0 10px;
+            color: $darkredtextbg;
+            font-size: 20px;
+        }
+    }
+
+    &__productCard-count {
+        //margin-top: 50px;
+        color: $darktext;
+        //width: 100%;
         line-height: 13px;
         background: transparent;
         border: 0;
         border-bottom: 1px solid rgb(119, 0, 0);
         padding-bottom: 10px;
         outline: none;
-        font-size: 13px;
+        font-size: 16px;
         display: block;
     }
 
-    &__login-button {
-        margin: 40px 20px 0 0;
+    &__productCard-button {
+        margin: 30px 0 0 0;
         position: relative;
-        padding: 15px 30px 15px 45px;
+        padding: 15px 25px 15px 40px;
         display: inline-block;
         color: $darkredtextbg;
         background: $lightgrey;
         transition: 1s;
-        border-radius: 25px;
+        border-radius: 10px;
         font-size: 14px;
         font-weight: 500;
         display: inline-flex;
@@ -171,31 +135,33 @@
         }
     }
 
-    &__login-buttonIcon {
+    &__productCard-buttonIcon {
         position: absolute;
-        width: 30px;
-        left: 12px;
+        width: 22px;
+        left: 8px;
     }
 
-    &__login-forgetPaswd {
+    &__productCard-cancel {
+        margin: 0 0 0 10px;
+        //display: block;
         font-size: 12px;
         color: $darktext;
         text-decoration: underline;
     }
 
-    &__login-close {
+    &__productCard-close {
         position: absolute;
-        right: 32px;
-        top: 32px;
+        right: 35px;
+        top: 28px;
         width: 15px;
         height: 15px;
         opacity: 0.3;
     }
-    &__login-close:hover {
+    &__productCard-close:hover {
         opacity: 1;
     }
-    &__login-close:before,
-    &__login-close:after {
+    &__productCard-close:before,
+    &__productCard-close:after {
         position: absolute;
         left: 15px;
         content: " ";
@@ -203,12 +169,23 @@
         width: 2px;
         background-color: #333;
     }
-    &__login-close:before {
+    &__productCard-close:before {
         transform: rotate(45deg);
     }
-    &__login-close:after {
+    &__productCard-close:after {
         transform: rotate(-45deg);
     }
+}
+
+.socialButton {
+    display: none;
+    &-open {
+        display: none;
+    }
+}
+
+.free-place {
+    height: 110px;
 }
 
 .categoriesMenu {
@@ -356,5 +333,7 @@
 }
 
 @import "_footer";
-//@import "null-mediaQuery";
-//@import "header&footer-mediaQuery";
+
+@import "null-mediaQuery";
+
+@import "header&footer-mediaQuery";

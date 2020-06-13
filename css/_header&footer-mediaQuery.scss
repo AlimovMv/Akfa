@@ -10,9 +10,7 @@
         padding-left: 360px;
         &-item {
             padding: 15px 35px;
-            span {
-                font-size: 20px;
-            }
+            font-size: 20px;
         }
     }
 
@@ -92,11 +90,8 @@
         //right: 15%;
         padding-left: 180px;
         &-item {
-            padding: 20px 0;
-            span {
-                padding: 0 40px;
-                font-size: 20px;
-            }
+            padding: 20px 40px;
+            font-size: 20px;
         }
     }
 
@@ -146,11 +141,8 @@
     .header__login {
         padding-left: 350px;
         &-item {
-            padding: 10px 0;
-            span {
-                padding: 0 20px;
-                font-size: 16px;
-            }
+            padding: 10px 20px;
+            font-size: 16px;
         }
     }
 }
@@ -184,11 +176,8 @@
         //right: 15%;
         padding-left: 25px;
         &-item {
-            padding: 10px 0;
-            span {
-                padding: 0 20px;
-                font-size: 14px;
-            }
+            padding: 10px 20px;
+            font-size: 14px;
         }
     }
 
@@ -214,11 +203,8 @@
     .header__login {
         padding-left: 310px;
         &-item {
-            padding: 10px 0;
-            span {
-                padding: 0 20px;
-                font-size: 14px;
-            }
+            padding: 10px 20px;
+            font-size: 14px;
         }
     }
 }

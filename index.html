@@ -38,6 +38,27 @@
     <img src="/images/instagram.png" alt="">
 </div>
 
+<div class="popup__login">
+    <div class="popup__login-body">
+        <div class="popup__login-content">
+            <div class="popup__login-close" href="#"></div>
+            <div class="popup__login-title">Вход</div>
+            <img class="popup__login-logo" src="images/akfa_logo-kg.svg" alt="">
+
+            <div class="popup__login-text"><b>Здравствуйте,</b> <br> рады вновь приветствовать вас!</div>
+            <form class="popup__login-auth-form" action="catalog.html" method="post" enctype="multipart/form-data">
+                <input placeholder="Введите логин" class="popup__login-auth-login" type="text" name="userlogin"
+                    value="">
+                <input placeholder="Введите пароль" class="popup__login-auth-passwd" type="password" name="userpas"
+                    value="">
+                <div class="popup__login-button"><img class="popup__login-buttonIcon" src="/images/login-new.png"
+                        alt="">Войти</div>
+                <a class="popup__login-forgetPaswd" href="#">Забыли пароль?</a>
+            </form>
+        </div>
+    </div>
+</div>
+
 <body>
 
     <header class="header">
@@ -55,7 +76,11 @@
                     <a href="#" class="header__nav-item">Партнерам</a>
                 </nav>
                 <div class="header__login">
-                    <a href="#" class="header__login-item"><span>Войти</span></a>
+                    <div class="header__login-item">Войти</div>
+                </div>
+                <div class="orders">
+                    <div class="orders-item">В корзине пусто</div>
+                    <!--После подбора товара текст поменяется |2 шт. = 4446 с| -->
                 </div>
                 <div class="burgermenu">
                     <img src="/images/icon-burger.svg" alt="#">

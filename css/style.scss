@@ -344,6 +344,10 @@
 
 @import "_footer";
 
+@import "null-mediaQuery";
+
+@import "header&footer-mediaQuery";
+
 @media (max-width: 1200px) {
     .news__item {
         max-width: 47%;
@@ -625,5 +629,3 @@
         }
     }
 }
-
-@import "header&footer-mediaQuery";

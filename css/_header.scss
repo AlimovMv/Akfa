@@ -78,19 +78,21 @@
             padding: 10px 20px;
             border-radius: 5px;
             transition: 0.3s linear;
-            span {
-                font-weight: 500;
-                font-size: 16px;
-                color: $lighttext;
-            }
+            font-weight: 500;
+            font-size: 16px;
+            color: $lighttext;
 
             &:hover {
                 box-shadow: 0 0 10px rgba(97, 97, 97, 0.3);
                 background-color: $lightbg;
-                span {
-                    color: $darkredtextbg;
-                }
+                color: $darkredtextbg;
             }
+        }
+        &.active {
+            display: block;
+        }
+        &.inactive {
+            display: none;
         }
     }
 

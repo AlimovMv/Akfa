@@ -41,6 +41,54 @@ $(document).ready(function () {
 
     });
 
+
+
+    $('.header__login').click(function (event) {
+        $('.popup__login').removeClass('close');
+        $('.popup__login').addClass('open');
+    });
+
+
+    $('.popup__login-button').click(function (event) {
+        $('.popup__login').removeClass('open');
+        $('.popup__login').addClass('close');
+    });
+
+    $('.popup__login-close').click(function (event) {
+        $('.popup__login').removeClass('open');
+        $('.popup__login').addClass('close');
+    });
+
+    $('.popup__login-button').click(function (event) {
+        $('.header__login').removeClass('active');
+        $('.header__login').addClass('inactive');
+
+        $('.orders').removeClass('inactive');
+        $('.orders').addClass('active');
+
+        $('.products__item-addToOrder').removeClass('inactive');
+        $('.products__item-addToOrder').addClass('active');
+    });
+
+
+
+    $('.popup__productCard-button').click(function (event) {
+        $('.popup__productCard').removeClass('open');
+        $('.popup__productCard').addClass('close');
+    });
+
+    $('.popup__productCard-close').click(function (event) {
+        $('.popup__productCard').removeClass('open');
+        $('.popup__productCard').addClass('close');
+    });
+
+    $('.products__item-addToOrder').click(function (event) {
+        $('.popup__productCard').removeClass('close');
+        $('.popup__productCard').addClass('open');
+    });
+
+
+
     $("#carouselPartners").owlCarousel({
         loop: true, //Зацикливаем слайдер
         margin: 50, //Отступ от элемента справа в 50px
