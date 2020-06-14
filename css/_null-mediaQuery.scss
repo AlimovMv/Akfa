@@ -2,9 +2,9 @@
     .burgermenu {
         display: block;
         align-self: center;
-        margin: 0;
-        padding: 0 30px 0 0;
-        img {
+        //margin: 0;
+        padding: 0 0 0 30px;
+        &-icon {
             max-width: 30px;
             height: auto;
         }
@@ -20,9 +20,8 @@
         display: none;
         align-self: center;
         z-index: 9;
-        margin: 0;
-        padding: 0 30px 0 0;
-        img {
+        padding: 0 0 0 30px;
+        &-icon {
             max-width: 30px;
             height: auto;
         }
@@ -36,6 +35,13 @@
 
     .container {
         max-width: 970px;
+    }
+
+    .loginButton,
+    .ordersButton {
+        //z-index: 7;
+        //padding: 15px 35px;
+        //font-size: 20px;
     }
 }
 
@@ -67,20 +73,17 @@
     }
 
     .burgermenu {
-        margin: 0;
-        padding: 0;
-        img {
-            //opacity: 1;
-            max-width: 40px;
+        padding: 0 0 0 20px;
+        &-icon {
+            max-width: 25px;
             height: auto;
         }
     }
 
     .burgermenu-x {
-        margin: 0;
-        padding: 0;
-        img {
-            max-width: 40px;
+        padding: 0 0 0 20px;
+        &-icon {
+            max-width: 25px;
             height: auto;
         }
     }
@@ -99,19 +102,25 @@
         font-size: 30px;
         line-height: 55px;
     }
+
+    .loginButton,
+    .ordersButton {
+        //padding: 10px 20px;
+        //font-size: 16px;
+    }
 }
 
 @media (max-width: 992px) and (orientation: landscape) {
     .burgermenu {
-        img {
-            max-width: 30px;
+        &-icon {
+            max-width: 25px;
             height: auto;
         }
     }
 
     .burgermenu-x {
-        img {
-            max-width: 30px;
+        &-icon {
+            max-width: 25px;
             height: auto;
         }
     }
@@ -143,28 +152,31 @@
         font-size: 40px;
         line-height: 50px;
     }
+
+    .loginButton,
+    .ordersButton {
+        //padding: 10px 20px;
+        //font-size: 16px;
+    }
 }
 
 @media (max-width: 787px) {
     .container {
         max-width: 100%;
-        padding: 0 30px;
+        padding: 0 20px;
     }
 
     .burgermenu {
-        margin: 0;
-        padding: 0;
-        img {
-            //opacity: 1;
+        padding: 0 0 0 10px;
+        &-icon {
             max-width: 24px;
             height: auto;
         }
     }
 
     .burgermenu-x {
-        margin: 0;
-        padding: 0;
-        img {
+        padding: 0 0 0 10px;
+        &-icon {
             max-width: 24px;
             height: auto;
         }
@@ -204,7 +216,17 @@
         font-size: 25px;
         line-height: 40px;
     }
+
+    .loginButton,
+    .ordersButton {
+        transform: scale(0.8);
+    }
 }
 
 @media (max-width: 787px) and (orientation: landscape) {
+    .loginButton,
+    .ordersButton {
+        //padding: 10px 20px;
+        //font-size: 14px;
+    }
 }

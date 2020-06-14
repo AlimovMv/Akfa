@@ -43,7 +43,7 @@ $(document).ready(function () {
 
 
 
-    $('.header__login').click(function (event) {
+    $('.loginButton').click(function (event) {
         $('.popup__login').removeClass('close');
         $('.popup__login').addClass('open');
     });
@@ -60,11 +60,11 @@ $(document).ready(function () {
     });
 
     $('.popup__login-button').click(function (event) {
-        $('.header__login').removeClass('active');
-        $('.header__login').addClass('inactive');
+        $('.loginButton').removeClass('active');
+        $('.loginButton').addClass('inactive');
 
-        $('.orders').removeClass('inactive');
-        $('.orders').addClass('active');
+        $('.ordersButton').removeClass('inactive');
+        $('.ordersButton').addClass('active');
 
         $('.products__item-addToOrder').removeClass('inactive');
         $('.products__item-addToOrder').addClass('active');
@@ -87,7 +87,10 @@ $(document).ready(function () {
         $('.popup__productCard').addClass('open');
     });
 
-
+    $('.popup__productCard-cancel').click(function (event) {
+        $('.popup__productCard').removeClass('open');
+        $('.popup__productCard').addClass('close');
+    });
 
     $("#carouselPartners").owlCarousel({
         loop: true, //Зацикливаем слайдер

@@ -1,9 +1,9 @@
 .header {
     font-family: Montserrat;
     color: $lighttext;
+    position: relative;
 
     &__menu {
-        position: relative;
         z-index: 100;
         padding: 30px 0;
         background-color: rgba($color: $lightbg, $alpha: 0.8);
@@ -65,34 +65,6 @@
                 left: 0;
                 z-index: 1;
             }
-        }
-    }
-
-    &__login {
-        align-self: center;
-        font-size: 14px;
-        text-decoration: none;
-        font-family: Montserrat;
-        &-item {
-            background-color: $darkredtextbg;
-            padding: 10px 20px;
-            border-radius: 5px;
-            transition: 0.3s linear;
-            font-weight: 500;
-            font-size: 16px;
-            color: $lighttext;
-
-            &:hover {
-                box-shadow: 0 0 10px rgba(97, 97, 97, 0.3);
-                background-color: $lightbg;
-                color: $darkredtextbg;
-            }
-        }
-        &.active {
-            display: block;
-        }
-        &.inactive {
-            display: none;
         }
     }
 

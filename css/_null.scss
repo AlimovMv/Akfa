@@ -321,31 +321,54 @@ body {
     }
 }
 
-.orders {
-    display: none;
+.freePlace {
+    flex: 1 1 auto;
+}
+
+.header__buttons {
     align-self: center;
     text-decoration: none;
     font-family: Montserrat;
-    position: relative;
-    &-item {
-        background-color: $darkredtextbg;
-        padding: 15px 10px;
-        border-radius: 4px;
-        transition: 0.3s linear;
-        //font-weight: 500;
-        font-size: 13px;
-        color: $lighttext;
+    //padding: 15px 20px;
+    transition: 0.3s linear;
+    //font-weight: 500;
+    font-size: 16px;
+    color: $lighttext;
+}
 
-        &:hover {
-            box-shadow: 0 0 10px rgba(97, 97, 97, 0.3);
-            background-color: $lightbg;
-            color: $darkredtextbg;
-        }
+.loginButton,
+.ordersButton {
+    z-index: 40;
+    border-radius: 5px;
+    background-color: $darkredtextbg;
+    width: 120px;
+    height: 40px;
+    position: relative;
+
+    &-item {
+        position: absolute;
+        top: 30%;
+        left: 27%;
     }
+
+    &:hover {
+        box-shadow: 0 0 10px rgba(97, 97, 97, 0.3);
+        background-color: $lightbg;
+        color: $darkredtextbg;
+    }
+
     &.active {
         display: block;
     }
+
     &.inactive {
         display: none;
+    }
+}
+
+.ordersButton {
+    display: none;
+    &-item {
+        left: 20%;
     }
 }

@@ -1,19 +1,4 @@
 @media (max-width: 1200px) {
-    .header__login {
-        //display: none;
-        //position: fixed;
-        //top: 0;
-        //right: 15%;
-        margin: 0;
-        padding: 0;
-        z-index: 7;
-        padding-left: 360px;
-        &-item {
-            padding: 15px 35px;
-            font-size: 20px;
-        }
-    }
-
     .header__nav {
         //display: none;
         transition: 1s; //ok
@@ -84,17 +69,6 @@
         }
     }
 
-    .header__login {
-        //display: none;
-        //top: 0;
-        //right: 15%;
-        padding-left: 180px;
-        &-item {
-            padding: 20px 40px;
-            font-size: 20px;
-        }
-    }
-
     .footer {
         display: none;
     }
@@ -137,14 +111,6 @@
             padding-right: 20px;
         }
     }
-
-    .header__login {
-        padding-left: 350px;
-        &-item {
-            padding: 10px 20px;
-            font-size: 16px;
-        }
-    }
 }
 
 @media (max-width: 787px) {
@@ -170,17 +136,6 @@
         }
     }
 
-    .header__login {
-        //display: none;
-        //top: 0;
-        //right: 15%;
-        padding-left: 25px;
-        &-item {
-            padding: 10px 20px;
-            font-size: 14px;
-        }
-    }
-
     .subfooter {
         font-size: 10px;
         p {
@@ -200,11 +155,4 @@
 }
 
 @media (max-width: 787px) and (orientation: landscape) {
-    .header__login {
-        padding-left: 310px;
-        &-item {
-            padding: 10px 20px;
-            font-size: 14px;
-        }
-    }
 }
