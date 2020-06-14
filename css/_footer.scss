@@ -1,5 +1,5 @@
 .footer {
-    background-color: #444444;
+    background-color: $darkgrey;
     padding-top: 30px;
     color: $lighttext;
     font-size: 12px;
@@ -57,7 +57,7 @@
 }
 
 .subfooter {
-    background: $darkgrey;
+    background: #444444;
     padding-top: 10px;
     font-size: 12px;
     &__wrapper {
@@ -66,7 +66,8 @@
         justify-content: space-between;
     }
 
-    a {
+    a,
+    p {
         color: $lighttext;
         display: block;
         transition: 0.5s;

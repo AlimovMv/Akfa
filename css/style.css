@@ -126,8 +126,8 @@ body {
 
 .socialButton {
   position: fixed;
-  -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
   bottom: 40px;
   right: 40px;
   border-radius: 50%;
@@ -143,10 +143,10 @@ body {
 }
 
 .socialButton-open {
-  -webkit-transition: 2s;
-  transition: 2s;
+  -webkit-transition: 1s;
+  transition: 1s;
   position: fixed;
-  bottom: 150px;
+  bottom: -100%;
   right: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -167,9 +167,13 @@ body {
           box-shadow: 0 0 30px rgba(97, 97, 97, 0.6);
 }
 
+.socialButton-open.active {
+  bottom: 150px;
+}
+
 .socialButton:hover {
-  -webkit-filter: grayscale(0%);
-          filter: grayscale(0%);
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
 }
 
 .popup__login {
@@ -930,7 +934,7 @@ body {
 }
 
 .footer {
-  background-color: #444444;
+  background-color: #555454;
   padding-top: 30px;
   color: #ffffff;
   font-size: 12px;
@@ -1005,7 +1009,7 @@ body {
 }
 
 .subfooter {
-  background: #555454;
+  background: #444444;
   padding-top: 10px;
   font-size: 12px;
 }
@@ -1023,7 +1027,8 @@ body {
           justify-content: space-between;
 }
 
-.subfooter a {
+.subfooter a,
+.subfooter p {
   color: #ffffff;
   display: block;
   -webkit-transition: 0.5s;
@@ -1241,8 +1246,8 @@ body {
 
 @media (max-width: 1200px) {
   .header__nav {
-    -webkit-transition: 1s;
-    transition: 1s;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
     position: fixed;
     right: -100%;
     top: 0;

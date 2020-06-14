@@ -1,5 +1,12 @@
 $(document).ready(function () {
 
+    $('.socialButton').click(function (event) {
+
+        $('.socialButton-open').toggleClass('active');
+        //$('.socialButton-open').addClass('active');
+
+    });
+
     $('.burgermenu').click(function (event) {
 
         $('.burgermenu').removeClass('active');
