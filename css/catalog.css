@@ -874,8 +874,8 @@ body {
 }
 
 .orders {
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.5s linear;
+  transition: 0.5s linear;
   padding: 150px 20px 20px 20px;
   width: 310px;
   height: 100%;
@@ -957,7 +957,6 @@ body {
 }
 
 .orders__item-container {
-  margin: 7px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -975,15 +974,31 @@ body {
 .orders__item-price {
   font-size: 16px;
   font-weight: 700;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.orders__item-count {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 .orders__item-countNumber {
   width: 32px;
   text-align: center;
   float: right;
+  font-size: 20px;
 }
 
 .orders__item-countAdd {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
   width: 24px;
   height: 24px;
   background: #e0e0e0;
@@ -992,9 +1007,20 @@ body {
   text-align: center;
   cursor: pointer;
   float: right;
+  position: relative;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.orders__item-countAdd span {
+  position: absolute;
+  top: 0;
+  left: 5px;
 }
 
 .orders__item-countDel {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
   width: 24px;
   height: 24px;
   background: #e0e0e0;
@@ -1003,6 +1029,15 @@ body {
   text-align: center;
   cursor: pointer;
   float: right;
+  position: relative;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.orders__item-countDel span {
+  position: absolute;
+  top: -1px;
+  left: 7px;
 }
 
 .orders__footer {

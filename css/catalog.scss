@@ -344,7 +344,7 @@
 }
 
 .orders {
-    transition: 0.5s;
+    transition: 0.5s linear;
     padding: 150px 20px 20px 20px;
     width: 310px;
     height: 100%;
@@ -422,7 +422,7 @@
     }
 
     &__item-container {
-        margin: 7px 0;
+        //margin: 7px 0;
         display: flex;
         justify-content: space-between;
     }
@@ -436,18 +436,24 @@
     &__item-price {
         font-size: 16px;
         font-weight: 700;
+        align-self: flex-end;
     }
 
     &__item-count {
+        align-self: flex-end;
+        display: flex;
+        align-items: flex-end;
     }
 
     &__item-countNumber {
         width: 32px;
         text-align: center;
         float: right;
+        font-size: 20px;
     }
 
     &__item-countAdd {
+        align-self: flex-end;
         width: 24px;
         height: 24px;
         background: rgb(224, 224, 224);
@@ -456,9 +462,18 @@
         text-align: center;
         cursor: pointer;
         float: right;
+        position: relative;
+        font-weight: 600;
+        font-size: 24px;
+        span {
+            position: absolute;
+            top: 0;
+            left: 5px;
+        }
     }
 
     &__item-countDel {
+        align-self: flex-end;
         width: 24px;
         height: 24px;
         background: rgb(224, 224, 224);
@@ -467,6 +482,14 @@
         text-align: center;
         cursor: pointer;
         float: right;
+        position: relative;
+        font-weight: 600;
+        font-size: 24px;
+        span {
+            position: absolute;
+            top: -1px;
+            left: 7px;
+        }
     }
 
     &__footer {
