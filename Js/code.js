@@ -6,6 +6,7 @@ $(document).ready(function () {
 
     $('.ordersButton').click(function (event) {
         $('.orders').toggleClass('active');
+        $('.ordersButton').toggleClass('clicked');
     });
 
     $('.burgermenu').click(function (event) {

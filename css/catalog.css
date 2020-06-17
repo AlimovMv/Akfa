@@ -402,6 +402,14 @@ body {
   display: none;
 }
 
+.loginButton.clicked,
+.ordersButton.clicked {
+  -webkit-box-shadow: 0 0 10px rgba(97, 97, 97, 0.3);
+          box-shadow: 0 0 10px rgba(97, 97, 97, 0.3);
+  background-color: #ffffff;
+  color: #990100;
+}
+
 .ordersButton {
   display: none;
 }
@@ -888,12 +896,6 @@ body {
   right: 0;
   overflow-y: auto;
   overflow-x: hidden;
-}
-
-.orders__title {
-  font-size: 18px;
-  margin: 0 0 60px 0;
-  text-align: right;
 }
 
 .orders__item {
