@@ -5,6 +5,10 @@
     background-color: rgba($color: $lightbg, $alpha: 1);
 }
 
+.footer {
+    z-index: 102;
+}
+
 .popup {
     &__productCard {
         transition: 0.4s;
@@ -336,6 +340,172 @@
 
     &__content {
         position: relative;
+    }
+}
+
+.orders {
+    transition: 0.5s;
+    padding: 150px 20px 20px 20px;
+    width: 310px;
+    height: 100%;
+    background-color: $darkgrey;
+    opacity: 0.98;
+    color: $lighttext;
+    position: fixed;
+    z-index: 10;
+    top: -100%;
+    right: 0;
+    &__title {
+        font-size: 18px;
+        margin: 0 0 60px 0;
+        text-align: right;
+    }
+
+    &__wrapper {
+    }
+
+    &__item {
+        display: flex;
+    }
+
+    &__item-icon {
+        position: relative;
+        padding: 0 20px 0 0;
+    }
+
+    &__item-img {
+        border-radius: 10px;
+        width: 75px;
+        height: 75px;
+        object-fit: cover;
+    }
+    &__item-cancelbtnround {
+        position: absolute;
+        top: -15px;
+        left: 65px;
+        background-color: $lightbg;
+        padding: 12px;
+        border-radius: 50%;
+        opacity: 0.8;
+    }
+
+    &__item-cancelbtnround:hover {
+        opacity: 1;
+    }
+
+    &__item-cancelbtn {
+        position: absolute;
+        top: -2.9px;
+        left: 3.9px;
+        width: 15px;
+        height: 15px;
+    }
+
+    &__item-cancelbtn:before,
+    &__item-cancelbtn:after {
+        position: absolute;
+        left: 15px;
+        content: " ";
+        height: 15px;
+        width: 1px;
+        top: 50%;
+        left: 50%;
+        background-color: #333;
+    }
+
+    &__item-cancelbtn:before {
+        transform: rotate(45deg);
+    }
+
+    &__item-cancelbtn:after {
+        transform: rotate(-45deg);
+    }
+
+    &__item-container {
+        margin: 7px 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item-title {
+        font-size: 16px;
+        margin: 7px 0;
+        margin: 0 auto;
+    }
+
+    &__item-price {
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    &__item-count {
+    }
+
+    &__item-countNumber {
+        width: 32px;
+        text-align: center;
+        float: right;
+    }
+
+    &__item-countAdd {
+        width: 24px;
+        height: 24px;
+        background: rgb(224, 224, 224);
+        border-radius: 50%;
+        color: $darkredtextbg;
+        text-align: center;
+        cursor: pointer;
+        float: right;
+    }
+
+    &__item-countDel {
+        width: 24px;
+        height: 24px;
+        background: rgb(224, 224, 224);
+        border-radius: 50%;
+        color: $darkredtextbg;
+        text-align: center;
+        cursor: pointer;
+        float: right;
+    }
+
+    &__footer {
+        position: absolute;
+        text-align: center;
+        bottom: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__submitbtn {
+        margin: 0 10px 20px 0;
+        border-radius: 30px;
+        padding: 15px 25px;
+        background: #ffffff;
+        color: $darkredtextbg;
+        font-weight: 600;
+        font-size: 13px;
+    }
+
+    &__all {
+        padding: 0 10px 0 0;
+        text-align: right;
+    }
+
+    &__all-text {
+        color: $lightgrey;
+    }
+
+    &__all-price {
+        color: $lighttext;
+        font-weight: 600;
+        font-size: 23px;
+        padding: 5px 0 0 0;
+        //line-height: 30px;
+    }
+
+    &.active {
+        top: 0;
     }
 }
 

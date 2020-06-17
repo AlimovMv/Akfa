@@ -1,10 +1,11 @@
 $(document).ready(function () {
 
     $('.socialButton').click(function (event) {
-
         $('.socialButton-open').toggleClass('active');
-        //$('.socialButton-open').addClass('active');
+    });
 
+    $('.ordersButton').click(function (event) {
+        $('.orders').toggleClass('active');
     });
 
     $('.burgermenu').click(function (event) {
@@ -162,6 +163,5 @@ $(document).ready(function () {
 });
 
 function submitOnClick(buttonlink, user, password) {
-
     alert("Вы нажали на кнопку " + buttonlink.name);
 }
