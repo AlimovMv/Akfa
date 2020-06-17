@@ -355,17 +355,20 @@
     z-index: 10;
     top: -100%;
     right: 0;
-    &__title {
-        font-size: 18px;
-        margin: 0 0 60px 0;
-        text-align: right;
-    }
+    overflow-y: auto;
+    overflow-x: hidden;
+    //&__title {
+    // font-size: 18px;
+    // margin: 0 0 60px 0;
+    // text-align: right;
+    //}
 
-    &__wrapper {
-    }
+    // &__wrapper {
+    // }
 
     &__item {
         display: flex;
+        padding: 0 0 15px 0;
     }
 
     &__item-icon {
@@ -502,12 +505,12 @@
 
     &__submitbtn {
         margin: 0 10px 20px 0;
-        border-radius: 30px;
-        padding: 15px 25px;
+        border-radius: 20px;
+        padding: 15px 15px;
         background: #ffffff;
         color: $darkredtextbg;
         font-weight: 600;
-        font-size: 13px;
+        font-size: 12px;
     }
 
     &__all {
