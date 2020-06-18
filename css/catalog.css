@@ -94,6 +94,10 @@ body {
   color: #555454;
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 .container {
   max-width: 1170px;
   margin: 0 auto;
@@ -1554,6 +1558,7 @@ body {
     background: #990100;
     color: #ffffff;
     display: block;
+    font-size: 14px;
   }
   .categoriesMenu {
     position: relative;

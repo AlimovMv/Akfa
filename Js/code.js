@@ -7,10 +7,12 @@ $(document).ready(function () {
     $('.ordersButton').click(function (event) {
         $('.orders').toggleClass('active');
         $('.ordersButton').toggleClass('clicked');
+        $('body').toggleClass('lock');
     });
 
     $('.burgermenu').click(function (event) {
 
+        $('body').addClass('lock');
         $('.burgermenu').removeClass('active');
         $('.burgermenu').addClass('inactive');
 
@@ -32,6 +34,7 @@ $(document).ready(function () {
 
     $('.burgermenu-x').click(function (event) {
 
+        $('body').removeClass('lock');
         $('.burgermenu-x').removeClass('active');
         $('.burgermenu-x').addClass('inactive');
 
@@ -53,22 +56,26 @@ $(document).ready(function () {
 
 
     $('.loginButton').click(function (event) {
+        $('body').addClass('lock');
         $('.popup__login').removeClass('close');
         $('.popup__login').addClass('open');
     });
 
 
     $('.popup__login-button').click(function (event) {
+        $('body').removeClass('lock');
         $('.popup__login').removeClass('open');
         $('.popup__login').addClass('close');
     });
 
     $('.popup__login-close').click(function (event) {
+        $('body').removeClass('lock');
         $('.popup__login').removeClass('open');
         $('.popup__login').addClass('close');
     });
 
     $('.popup__login-button').click(function (event) {
+        $('body').removeClass('lock');
         $('.loginButton').removeClass('active');
         $('.loginButton').addClass('inactive');
 
@@ -82,21 +89,25 @@ $(document).ready(function () {
 
 
     $('.popup__productCard-button').click(function (event) {
+        $('body').removeClass('lock');
         $('.popup__productCard').removeClass('open');
         $('.popup__productCard').addClass('close');
     });
 
     $('.popup__productCard-close').click(function (event) {
+        $('body').removeClass('lock');
         $('.popup__productCard').removeClass('open');
         $('.popup__productCard').addClass('close');
     });
 
     $('.products__item-addToOrder').click(function (event) {
+        $('body').addClass('lock');
         $('.popup__productCard').removeClass('close');
         $('.popup__productCard').addClass('open');
     });
 
     $('.popup__productCard-cancel').click(function (event) {
+        $('body').removeClass('lock');
         $('.popup__productCard').removeClass('open');
         $('.popup__productCard').addClass('close');
     });
