@@ -1121,6 +1121,9 @@ body {
     display: none;
   }
   .socialButton-open {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     bottom: 20px;
     right: -100%;
     z-index: 150;
@@ -1219,7 +1222,7 @@ body {
     height: auto;
   }
   .socialButton-open {
-    bottom: 20px;
+    bottom: 0;
     right: -100%;
   }
   .socialButton-open.active {
@@ -1231,7 +1234,7 @@ body {
   .socialButton-open img {
     width: 45px;
     height: auto;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
   .subtitle {
     font-size: 16px;
