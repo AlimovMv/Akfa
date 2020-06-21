@@ -1551,14 +1551,59 @@ body.lock {
     display: none;
   }
   .categoriesMenuMobile {
-    margin: 0 auto;
     padding: 0 10px;
     width: 100%;
-    height: 40px;
     background: #990100;
     color: #ffffff;
     display: block;
     font-size: 14px;
+  }
+  .categoriesMenuMobile-item {
+    margin: 0 0 20px 0;
+    position: relative;
+  }
+  .categoriesMenuMobile-item__input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+  .categoriesMenuMobile-item__input:checked ~ .categoriesMenuMobile-item__trigger::after {
+    content: "";
+    position: absolute;
+    /* Абсолютное позиционирование */
+    right: 20px;
+    top: 12px;
+    /* Положение треугольника */
+    border: 8px solid transparent;
+    /* Прозрачные границы */
+    border-bottom: 8px solid #ffffff;
+    /* Добавляем треугольник */
+  }
+  .categoriesMenuMobile-item__input:checked ~ .categoriesMenuMobile-item__content {
+    display: block;
+    padding: 15px 15px 15px 15px;
+    border-top: 2px solid #ffffff;
+  }
+  .categoriesMenuMobile-item__trigger {
+    display: block;
+    padding: 15px;
+    font-weight: 500;
+  }
+  .categoriesMenuMobile-item__trigger::after {
+    content: "";
+    position: absolute;
+    /* Абсолютное позиционирование */
+    right: 20px;
+    top: 20px;
+    /* Положение треугольника */
+    border: 8px solid transparent;
+    /* Прозрачные границы */
+    border-top: 8px solid #ffffff;
+    /* Добавляем треугольник */
+  }
+  .categoriesMenuMobile-item__content {
+    display: none;
   }
   .categoriesMenu {
     position: relative;

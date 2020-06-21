@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+
+<head>
+    <meta charset="utf-8" http-equiv="content-type">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>akfa.kg</title>
+
+
+    <script src="/Js/jquery.js"></script>
+    <script src="owlcarousel/owl.carousel.min.js"></script>
+    <script src="/Js/code.js"></script>
+
+    <link rel="stylesheet" href="css/catalog.css">
+    <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,regular,italic,700,700italic,900,900italic"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script:regular" rel="stylesheet" />
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__menu">
+            <div class="header__menu-container container">
+                <div class="header__logo">
+                    <img src="/images/akfa_logo-kg.svg" alt="#">
+                </div>
+                <nav class="header__nav">
+                    <a href="#" class="header__nav-item">Главная</a>
+                    <a href="#" class="header__nav-item header__nav-activeitem">Продукты</a>
+                    <!--<a href="#" class="header__nav-item">Акции</a>-->
+                    <a href="#" class="header__nav-item">Контакты</a>
+                    <a href="#" class="header__nav-item">Отзывы</a>
+                    <a href="#" class="header__nav-item">Партнерам</a>
+                </nav>
+
+                <div class="freePlace">
+
+                </div>
+                <div class="header__buttons">
+                    <div class="loginButton">
+                        <p class="loginButton-item">
+                            Войти
+                        </p>
+                    </div>
+                    <div class="ordersButton">
+                        <p class="ordersButton-item">
+                            Корзина
+                            <!--После подбора товара текст поменяется |2 шт. = 4446 с| -->
+                        </p>
+                    </div>
+                </div>
+
+                <div class="burgermenu">
+                    <img class="burgermenu-icon" src="/images/icon-burger.svg" alt="#">
+                </div>
+                <div class="burgermenu-x">
+                    <img class="burgermenu-x-icon" src="/images/icon-burger-x.svg" alt="#">
+                </div>
+            </div>
+        </div>
+
+        <div class="categoriesMenu">
+            <div class="categoriesMenu__wrapper">
+                <div class="container">
+                    <div class="categoriesMenu__wrapper-row">
+                        <a class="categoriesMenu__item categoriesMenu__activeitem" href="#">Сотрудничество</a>
+                        <a class="categoriesMenu__item" href="#">Как сделать заказ</a>
+                        <a class="categoriesMenu__item" href="#">Доставка и оплата</a>
+                        <a class="categoriesMenu__item" href="#">Гарантии</a>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="categoriesMenuMobile">
+                    <div class="categoriesMenuMobile-item">
+                        <input class="categoriesMenuMobile-item__input" type="checkbox" id="categoriesMenuMobile-1">
+                        <label class="categoriesMenuMobile-item__trigger" for="categoriesMenuMobile-1">
+                            Категория
+                        </label>
+                        <div class="categoriesMenuMobile-item__content">
+                            Пластиковые профили
+                        </div>
+                        <div class="categoriesMenuMobile-item__content">
+                            Алюминиевые профили
+                        </div>
+                        <div class="categoriesMenuMobile-item__content">
+                            Фасадные профили
+                        </div>
+                        <div class="categoriesMenuMobile-item__content">
+                            Оконная фурнитура
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+    </header>
+
+    <div class="popup__login">
+        <div class="popup__login-body">
+            <div class="popup__login-content">
+                <div class="popup__login-close"></div>
+                <div class="popup__login-title">Вход</div>
+                <img class="popup__login-logo" src="images/akfa_logo-kg.svg" alt="">
+
+                <div class="popup__login-text"><b>Здравствуйте,</b> <br> рады вновь приветствовать вас!</div>
+                <form class="popup__login-auth-form" action="catalog.html" method="post" enctype="multipart/form-data">
+                    <input placeholder="Введите логин" class="popup__login-auth-login" type="text" name="userlogin"
+                        value="">
+                    <input placeholder="Введите пароль" class="popup__login-auth-passwd" type="password" name="userpas"
+                        value="">
+                    <div class="popup__login-button"><img class="popup__login-buttonIcon" src="/images/login-new.png"
+                            alt=""> Войти</div>
+                    <a class="popup__login-forgetPaswd" href="#">Забыли пароль?</a>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="socialButton">
+        <img src="/images/social.svg" alt="">
+    </div>
+
+    <div class="socialButton-open">
+        <img src="/images/facebook.png" alt="">
+        <img src="/images/whatsapp.png" alt="">
+        <img src="/images/instagram.png" alt="">
+    </div>
+
+
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                <div class="footer__col">
+                    <div class="footer__logo">
+                        <img src="/images/akfagroup-logo.png" alt="">
+                    </div>
+                    <div class="footer__text">
+                        Ведущий производитель оконных систем в СНГ
+                    </div>
+                    <div class="footer__text">
+                        Обратная связь
+                    </div>
+                    <div class="footer__tel">
+                        <a href="#">+996555150595</a>
+                    </div>
+                </div>
+                <div class="footer__col">
+                    <div class="footer__title">
+                        КОМПАНИЯ «Akfa»
+                    </div>
+                    <ul class="footer__nav">
+                        <a href="#" class="footer__item">О компании</a>
+                        <a href="#" class="footer__item">Продукты</a>
+                        <!--<a href="#" class="footer__item">Акции</a>-->
+                        <a href="#" class="footer__item">Контакты</a>
+                        <a href="#" class="footer__item">Партнерам</a>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <div class="footer__title">
+                        ИНТЕРНЕТ-МАГАЗИН
+                    </div>
+                    <ul class="footer__nav">
+                        <a href="#" class="footer__item">Как сделать заказ</a>
+                        <a href="#" class="footer__item">Доставка и оплата</a>
+                        <a href="#" class="footer__item">Условия возврата и обмена</a>
+                        <a href="#" class="footer__item">Сотрудничество</a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="subfooter">
+        <div class="container">
+            <div class="subfooter__wrapper">
+                <div class="supfooter__wrapper-col">
+                    <p>© АО «Akfa» 2001—2020</p>
+                    <a class="subfooter__text" href="#">Официальное уведомление</a>
+                    <a class="subfooter__text" href="#">Политика конфиденциальности</a>
+                </div>
+                <div class="subfooter__wrapper-col">
+                    <p>Мы в соц. сетях</p>
+                    <div class="subfooter__wrapper-inner">
+                        <a href="#"><img
+                                src="https://www.technodom.kg/_ui/desktop/common/images/td_d_footer_social_vk.png"
+                                alt=""></a>
+                        <a href="#"><img
+                                src="https://www.technodom.kg/_ui/desktop/common/images/td_d_footer_social_facebook.png"
+                                alt=""></a>
+                        <a href="#"><img
+                                src="https://www.technodom.kg/_ui/desktop/common/images/td_d_footer_social_instagram.png"
+                                alt=""></a>
+                        <a href="#"><img
+                                src="https://www.technodom.kg/_ui/desktop/common/images/td_d_footer_social_youtube.png"
+                                alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
