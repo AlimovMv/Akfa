@@ -1,0 +1,397 @@
+@import "_null";
+@import "_header";
+
+.header__menu {
+    background-color: rgba($color: $lightbg, $alpha: 1);
+}
+
+.footer {
+    z-index: 102;
+}
+
+.socialButton {
+    display: none;
+
+    &-open {
+        display: none;
+    }
+}
+
+.tabsMobile {
+    display: none;
+}
+
+.tabs {
+    width: 100%;
+    //position: fixed;
+    z-index: 46;
+    background: $darkredtextbg;
+    //padding: 117px 0 0 0;
+
+    &__wrapper-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 10px 0 15px 0;
+    }
+
+    &__item {
+        padding: 20px 0;
+        max-width: 25%;
+        text-align: center;
+        line-height: 20px;
+        display: inline-block;
+        vertical-align: top;
+        margin: 0 20px;
+        transition: 0.3s;
+        position: relative;
+        font-weight: 500;
+        font-size: 14px;
+        color: $lighttext;
+
+        &:hover {
+            &:after {
+                content: "";
+                display: block;
+                width: 100%;
+                height: 3px;
+                background-color: $lighttext;
+                position: absolute;
+                margin-top: 8px;
+                left: 0;
+                z-index: 1;
+            }
+        }
+    }
+
+    &__activeitem {
+        &:after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 3px;
+            background-color: $lighttext;
+            position: absolute;
+            margin-top: 8px;
+            left: 0;
+            z-index: 1;
+        }
+    }
+}
+
+.about {
+    background: url("/images/about-wallpaper.png") no-repeat 50% 50%;
+    background-size: cover;
+    padding: 150px 0 90px 0;
+    max-height: 100vh;
+    &__text {
+        text-align: right;
+        color: $darktext;
+        line-height: 30px;
+        font-weight: 500;
+        font-size: 20px;
+    }
+}
+
+.orders {
+    transition: 0.5s linear;
+    padding: 150px 20px 20px 20px;
+    width: 310px;
+    height: 100%;
+    background-color: $darkgrey;
+    opacity: 0.98;
+    color: $lighttext;
+    position: fixed;
+    z-index: 10;
+    top: -100%;
+    right: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    //&__title {
+    // font-size: 18px;
+    // margin: 0 0 60px 0;
+    // text-align: right;
+    //}
+
+    // &__wrapper {
+    // }
+
+    &__item {
+        display: flex;
+        padding: 0 0 15px 0;
+    }
+
+    &__item-icon {
+        position: relative;
+        padding: 0 20px 0 0;
+    }
+
+    &__item-img {
+        border-radius: 10px;
+        width: 75px;
+        height: 75px;
+        object-fit: cover;
+    }
+    &__item-cancelbtnround {
+        position: absolute;
+        top: -15px;
+        left: 65px;
+        background-color: $lightbg;
+        padding: 12px;
+        border-radius: 50%;
+        opacity: 0.8;
+    }
+
+    &__item-cancelbtnround:hover {
+        opacity: 1;
+    }
+
+    &__item-cancelbtn {
+        position: absolute;
+        top: -2.9px;
+        left: 3.9px;
+        width: 15px;
+        height: 15px;
+    }
+
+    &__item-cancelbtn:before,
+    &__item-cancelbtn:after {
+        position: absolute;
+        left: 15px;
+        content: " ";
+        height: 15px;
+        width: 1px;
+        top: 50%;
+        left: 50%;
+        background-color: #333;
+    }
+
+    &__item-cancelbtn:before {
+        transform: rotate(45deg);
+    }
+
+    &__item-cancelbtn:after {
+        transform: rotate(-45deg);
+    }
+
+    &__item-container {
+        //margin: 7px 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item-title {
+        font-size: 16px;
+        margin: 7px 0;
+        margin: 0 auto;
+    }
+
+    &__item-price {
+        font-size: 16px;
+        font-weight: 700;
+        align-self: flex-end;
+    }
+
+    &__item-count {
+        align-self: flex-end;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    &__item-countNumber {
+        width: 32px;
+        text-align: center;
+        float: right;
+        font-size: 20px;
+    }
+
+    &__item-countAdd {
+        align-self: flex-end;
+        width: 24px;
+        height: 24px;
+        background: rgb(224, 224, 224);
+        border-radius: 50%;
+        color: $darkredtextbg;
+        text-align: center;
+        cursor: pointer;
+        float: right;
+        position: relative;
+        font-weight: 600;
+        font-size: 24px;
+        span {
+            position: absolute;
+            top: 0;
+            left: 5px;
+        }
+    }
+
+    &__item-countDel {
+        align-self: flex-end;
+        width: 24px;
+        height: 24px;
+        background: rgb(224, 224, 224);
+        border-radius: 50%;
+        color: $darkredtextbg;
+        text-align: center;
+        cursor: pointer;
+        float: right;
+        position: relative;
+        font-weight: 600;
+        font-size: 24px;
+        span {
+            position: absolute;
+            top: -1px;
+            left: 7px;
+        }
+    }
+
+    &__footer {
+        position: absolute;
+        text-align: center;
+        bottom: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__submitbtn {
+        margin: 0 10px 20px 0;
+        border-radius: 20px;
+        padding: 15px 15px;
+        background: #ffffff;
+        color: $darkredtextbg;
+        font-weight: 600;
+        font-size: 12px;
+    }
+
+    &__all {
+        padding: 0 10px 0 0;
+        text-align: right;
+    }
+
+    &__all-text {
+        color: $lightgrey;
+    }
+
+    &__all-price {
+        color: $lighttext;
+        font-weight: 600;
+        font-size: 23px;
+        padding: 5px 0 0 0;
+        //line-height: 30px;
+    }
+
+    &.active {
+        top: 0;
+    }
+}
+
+.certifications {
+    padding: 50px 0;
+    background-color: $lightbg;
+
+    &__title {
+        text-align: center;
+        margin-bottom: 30px;
+        color: $darkredtextbg;
+    }
+
+    &__item {
+        max-width: 70%;
+    }
+}
+
+@import "_footer";
+
+@import "null-mediaQuery";
+
+@import "header&footer-mediaQuery";
+
+@media (max-width: 1200px) {
+}
+
+@media (max-width: 992px) {
+    .tabs__wrapper {
+    }
+
+    .tabs {
+        //margin: 0 auto;
+        padding: 0 10px;
+        width: 100%;
+        //height: 40px;
+        background: $darkredtextbg;
+        color: $lighttext;
+        display: block;
+        font-size: 14px;
+    }
+
+    .tabsMobile-item,
+    .tabs-item {
+        position: relative;
+        &__input {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+        }
+
+        &__input:checked ~ &__trigger {
+            &::after {
+                content: "";
+                position: absolute; /* Абсолютное позиционирование */
+                right: 20px;
+                top: 12px; /* Положение треугольника */
+                border: 8px solid transparent; /* Прозрачные границы */
+                border-bottom: 8px solid #ffffff; /* Добавляем треугольник */
+            }
+        }
+
+        &__input:checked ~ &__content {
+            display: block;
+            padding: 15px 15px 15px 15px;
+            border-top: 2px solid #ffffff;
+        }
+
+        &__trigger {
+            display: block;
+            padding: 15px;
+            font-weight: 500;
+
+            &::after {
+                content: "";
+                position: absolute; /* Абсолютное позиционирование */
+                right: 20px;
+                top: 20px; /* Положение треугольника */
+                border: 8px solid transparent; /* Прозрачные границы */
+                border-top: 8px solid #ffffff; /* Добавляем треугольник */
+            }
+        }
+
+        &__content {
+            display: none;
+            line-height: 24px;
+        }
+    }
+
+    .tabs {
+        //position: relative;
+        //background: $darkredtextbg;
+        //padding: 0;
+    }
+}
+
+@media (max-width: 992px) and (orientation: landscape) {
+    .tabs {
+        padding: 0;
+    }
+}
+
+@media (max-width: 787px) {
+    .tabs {
+        position: relative;
+        background: $darkredtextbg;
+        padding: 0;
+    }
+}
+
+@media (max-width: 787px) and (orientation: landscape) {
+}
